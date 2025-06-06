@@ -1,0 +1,329 @@
+content,source,cleaned,t,sentiment_score,sentiment
+ok,playstore,ok,['ok'],4,positive
+Good job! :),playstore,good job,"['good', 'job']",9,positive
+mantap,playstore,mantap,['mantap'],5,positive
+mantab,playstore,mantab,['mantab'],9,positive
+Kita yang bekerja..kita juga yang suruh lapor pajak..ribet amat,playstore,kita yang bekerjakita juga yang suruh lapor pajakribet amat,"['kita', 'yang', 'bekerjakita', 'juga', 'yang', 'suruh', 'lapor', 'pajakribet', 'amat']",1,positive
+good pelayanan,playstore,good pelayanan,"['good', 'pelayanan']",12,positive
+terbaik,playstore,terbaik,['terbaik'],5,positive
+very good,playstore,very good,"['very', 'good']",9,positive
+tertarik,playstore,tertarik,['tertarik'],2,positive
+ok punya,playstore,ok punya,"['ok', 'punya']",7,positive
+good,playstore,good,['good'],9,positive
+Mantaap,playstore,mantaap,['mantap'],5,positive
+good job 👍,playstore,good job,"['good', 'job']",9,positive
+oke,playstore,oke,['oke'],9,positive
+selalu ok,playstore,selalu ok,"['selalu', 'ok']",4,positive
+Jos mantab,playstore,jos mantab,"['jos', 'mantab']",18,positive
+Good,playstore,good,['good'],9,positive
+Ok,playstore,ok,['ok'],4,positive
+Mantap,playstore,mantap,['mantap'],5,positive
+Mantap👍,playstore,mantap,['mantap'],5,positive
+BAGUSAN CORETAX,playstore,bagusan coretax,"['bagusan', 'coretax']",2,positive
+Keren,playstore,keren,['keren'],9,positive
+Respon email dan no hp lambat,playstore,respon email dan no hp lambat,"['respon', 'email', 'dan', 'no', 'hp', 'lambat']",2,positive
+Josss,playstore,josss,['josss'],9,positive
+Ok... Sip,playstore,ok sip,"['ok', 'sip']",4,positive
+"Balasan email lambat,mohon diperbaiki lg",playstore,balasan email lambatmohon diperbaiki lg,"['balasan', 'email', 'lambatmohon', 'diperbaiki', 'lagi']",33,positive
+Terima kasih,playstore,terima kasih,"['terima', 'kasih']",1,positive
+Mantap.,playstore,mantap,['mantap'],5,positive
+Mantap. Sangat berguna.,playstore,mantap sangat berguna,"['mantap', 'sangat', 'berguna']",5,positive
+Alangkah baiknya lapor SPT bisa diaplikasi ini juga,playstore,alangkah baiknya lapor spt bisa diaplikasi ini juga,"['alangkah', 'baiknya', 'lapor', 'seperti', 'bisa', 'diaplikasi', 'ini', 'juga']",15,positive
+Semoga berhasil melapor SPT tahuna,playstore,semoga berhasil melapor spt tahuna,"['semoga', 'berhasil', 'melapor', 'seperti', 'tahuna']",2,positive
+Top,playstore,top,['top'],9,positive
+pelayanan pajak prima dan praktis,playstore,pelayanan pajak prima dan praktis,"['pelayanan', 'pajak', 'prima', 'dan', 'praktis']",2,positive
+"Proses cepat, thanks",playstore,proses cepat thanks,"['proses', 'cepat', 'thanks']",1,positive
+"Apaan, gagalterus pas verifikasi EFIN. Tolong segera diperbaiki.",playstore,apaan gagalterus pas verifikasi efin tolong segera diperbaiki,"['apaan', 'gagalterus', 'pas', 'verifikasi', 'efin', 'tolong', 'segera', 'diperbaiki']",3,positive
+"Alhamdulillah,,,, proses permintaan efin sangat cepat, gk perlu waktu lama lgsg dikirim ke email. Mantap",playstore,alhamdulillah proses permintaan efin sangat cepat gk perlu waktu lama lgsg dikirim ke email mantap,"['alhamdulillah', 'proses', 'permintaan', 'efin', 'sangat', 'cepat', 'tidak', 'perlu', 'waktu', 'lama', 'langsung', 'dikirim', 'ke', 'email', 'mantap']",6,positive
+Memberi kemudahan dalam masalah layanan perpajakan. Nunggu balasan email utk nanya efin harus saat jam kerja... harus sabar emang,playstore,memberi kemudahan dalam masalah layanan perpajakan nunggu balasan email utk nanya efin harus saat jam kerja harus sabar emang,"['memberi', 'kemudahan', 'dalam', 'masalah', 'layanan', 'perpajakan', 'menunggu', 'balasan', 'email', 'untuk', 'bertanya', 'efin', 'harus', 'saat', 'jam', 'kerja', 'harus', 'sabar', 'memang']",15,positive
+Mntap,playstore,mntap,['mntap'],9,positive
+Oke,playstore,oke,['oke'],9,positive
+Ok 👍,playstore,ok,['ok'],4,positive
+tambah mudah aman,playstore,tambah mudah aman,"['tambah', 'mudah', 'aman']",2,positive
+Goood,playstore,goood,['goood'],9,positive
+Terbaik,playstore,terbaik,['terbaik'],5,positive
+Sering gangguan,playstore,sering gangguan,"['sering', 'gangguan']",3,positive
+Ok....👍,playstore,ok,['ok'],4,positive
+Kebanyakan chapcha,playstore,kebanyakan chapcha,"['kebanyakan', 'chapcha']",2,positive
+Ok mantap,playstore,ok mantap,"['ok', 'mantap']",9,positive
+Good apps,playstore,good apps,"['good', 'apps']",9,positive
+Very good 👍,playstore,very good,"['very', 'good']",9,positive
+Lapor pajak semakin mudah,playstore,lapor pajak semakin mudah,"['lapor', 'pajak', 'semakin', 'mudah']",1,positive
+"Oke belum berkembang, mulai berkembang, sangat oke berkembang 🤭",playstore,oke belum berkembang mulai berkembang sangat oke berkembang,"['oke', 'belum', 'berkembang', 'mulai', 'berkembang', 'sangat', 'oke', 'berkembang']",5,positive
+Jos,playstore,jos,['jos'],9,positive
+Bermanfaat,playstore,bermanfaat,['bermanfaat'],9,positive
+Mantap ...,playstore,mantap,['mantap'],5,positive
+Ok thanks,playstore,ok thanks,"['ok', 'thanks']",7,positive
+Ok dl aja,playstore,ok dl aja,"['ok', 'dulu', 'saja']",1,positive
+mantap 👍,playstore,mantap,['mantap'],5,positive
+sangat bermanfaat,playstore,sangat bermanfaat,"['sangat', 'bermanfaat']",4,positive
+Diperbaiki lah,playstore,diperbaiki lah,"['diperbaiki', 'lah']",18,positive
+Oke😊😊😊,playstore,oke,['oke'],9,positive
+Semoga segera diperbaiki,playstore,semoga segera diperbaiki,"['semoga', 'segera', 'diperbaiki']",6,positive
+Pelayanan terbaik,playstore,pelayanan terbaik,"['pelayanan', 'terbaik']",8,positive
+Mantap betul penjelasannya,playstore,mantap betul penjelasannya,"['mantap', 'betul', 'penjelasannya']",1,positive
+Great good...!!!!,playstore,great good,"['great', 'good']",12,positive
+Oke Bagus,playstore,oke bagus,"['oke', 'bagus']",5,positive
+Memudahkan dalam lapor pajak,playstore,memudahkan dalam lapor pajak,"['memudahkan', 'dalam', 'lapor', 'pajak']",2,positive
+Terimakasih.... 🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏,playstore,terimakasih,['terimakasih'],5,positive
+"Sangat bermanfaat dan memudahkan dalam pelaporan SPT tahunan, mudah dan praktis. Terima kasih",playstore,sangat bermanfaat dan memudahkan dalam pelaporan spt tahunan mudah dan praktis terima kasih,"['sangat', 'bermanfaat', 'dan', 'memudahkan', 'dalam', 'pelaporan', 'seperti', 'tahunan', 'mudah', 'dan', 'praktis', 'terima', 'kasih']",9,positive
+Tak bermanfaat,playstore,tak bermanfaat,"['tak', 'bermanfaat']",9,positive
+"Beri kenyamanan kepada kami, tks",playstore,beri kenyamanan kepada kami tks,"['beri', 'kenyamanan', 'kepada', 'kami', 'tks']",2,positive
+Mantab!!,playstore,mantab,['mantab'],9,positive
+Manttttapppz,playstore,manttttapppz,['manttttapppz'],9,positive
+Luar biasa,playstore,luar biasa,"['luar', 'biasa']",5,positive
+Sangat bermanfaat & berguna,playstore,sangat bermanfaat  berguna,"['sangat', 'bermanfaat', 'berguna']",9,positive
+Oke Mantap,playstore,oke mantap,"['oke', 'mantap']",14,positive
+Memudahkan dalam pelaporan SPT tahunan,playstore,memudahkan dalam pelaporan spt tahunan,"['memudahkan', 'dalam', 'pelaporan', 'seperti', 'tahunan']",1,positive
+email aktivasi gak pernah dikirim,playstore,email aktivasi gak pernah dikirim,"['email', 'aktivasi', 'tidak', 'pernah', 'dikirim']",4,positive
+Pake developer mana nih... Luar biasa,playstore,pake developer mana nih luar biasa,"['pakai', 'developer', 'mana', 'nih', 'luar', 'biasa']",5,positive
+Kerenn,playstore,kerenn,['keren'],9,positive
+Sangat bermanfaat,playstore,sangat bermanfaat,"['sangat', 'bermanfaat']",4,positive
+nice,playstore,nice,['nice'],4,positive
+Oke.,playstore,oke,['oke'],9,positive
+MANTAB lanjutkan sobat,playstore,mantab lanjutkan sobat,"['mantab', 'lanjutkan', 'sobat']",6,positive
+Good app,playstore,good app,"['good', 'app']",9,positive
+"Sering server error, tolong diperbaiki la",playstore,sering server error tolong diperbaiki la,"['sering', 'server', 'error', 'tolong', 'diperbaiki', 'lah']",10,positive
+NICE & RECOMMENDED,playstore,nice  recommended,"['nice', 'recommended']",4,positive
+Mantul,playstore,mantul,['mantul'],9,positive
+Alhamdulillah,playstore,alhamdulillah,['alhamdulillah'],5,positive
+Terima kasih M-Pajak,playstore,terima kasih mpajak,"['terima', 'kasih', 'mpajak']",1,positive
+Ok jga untuk mengurangi penyimpangan pjak,playstore,ok jga untuk mengurangi penyimpangan pjak,"['ok', 'juga', 'untuk', 'mengurangi', 'penyimpangan', 'pjak']",9,positive
+Good joob m-pajak sangat memudahkan dalam transaksi pajak secara online dan daring.,playstore,good joob mpajak sangat memudahkan dalam transaksi pajak secara online dan daring,"['good', 'joob', 'mpajak', 'sangat', 'memudahkan', 'dalam', 'transaksi', 'pajak', 'secara', 'online', 'dan', 'daring']",1,positive
+mantapp,playstore,mantapp,['mantap'],5,positive
+Mantap x pun,playstore,mantap x pun,"['mantap', 'kali', 'pun']",2,positive
+Good aplikation,playstore,good aplikation,"['good', 'aplikation']",9,positive
+Good job buat djp!,playstore,good job buat djp,"['good', 'job', 'buat', 'djp']",10,positive
+Terima kasih !!,playstore,terima kasih,"['terima', 'kasih']",1,positive
+Josssssss,playstore,josssssss,['josssssss'],9,positive
+"Tampilan elit, ngurus apa-apa syulit",playstore,tampilan elit ngurus apaapa syulit,"['tampilan', 'elit', 'mengurus', 'apaapa', 'syulit']",1,positive
+👍Top,playstore,top,['top'],9,positive
+Pelayanan WP semakin transparan 👍,playstore,pelayanan wp semakin transparan,"['pelayanan', 'wp', 'semakin', 'transparan']",8,positive
+Mantep,playstore,mantep,['mantap'],5,positive
+Buat,playstore,buat,['buat'],1,positive
+Ok nyaman,playstore,ok nyaman,"['ok', 'nyaman']",8,positive
+Birokrasi utk pegawai,playstore,birokrasi utk pegawai,"['birokrasi', 'untuk', 'pegawai']",3,positive
+mudahan sesuai harpana,playstore,mudahan sesuai harpana,"['mudahan', 'sesuai', 'harpana']",4,positive
+dicoba dulu,playstore,dicoba dulu,"['dicoba', 'dulu']",2,positive
+Makasih,playstore,makasih,['terima kasih'],5,positive
+Terima,playstore,terima,['terima'],2,positive
+Mantaaap,playstore,mantaaap,['mantap'],5,positive
+Mantap jiwa.sedikit kemajuan,playstore,mantap jiwasedikit kemajuan,"['mantap', 'jiwasedikit', 'kemajuan']",5,positive
+Sukses selalu dan mempermudah layanannya,playstore,sukses selalu dan mempermudah layanannya,"['sukses', 'selalu', 'dan', 'mempermudah', 'layanannya']",6,positive
+Okay,playstore,okay,['okay'],4,positive
+Verry Good,playstore,verry good,"['verry', 'good']",9,positive
+Mantap Mentong,playstore,mantap mentong,"['mantap', 'mentong']",5,positive
+Good👍🏻,playstore,good,['good'],9,positive
+Memberi dan Menerima,playstore,memberi dan menerima,"['memberi', 'dan', 'menerima']",1,positive
+BISMILLAH...,playstore,bismillah,['bismillah'],4,positive
+Verifikasi email aja gak msuk2 ke email,playstore,verifikasi email aja gak msuk ke email,"['verifikasi', 'email', 'saja', 'tidak', 'msuk2', 'ke', 'email']",6,positive
+"Praktis, simpel, mudah, aman dan good",playstore,praktis simpel mudah aman dan good,"['praktis', 'simpel', 'mudah', 'aman', 'dan', 'good']",15,positive
+Keren banget Bermanfaat bagi bangsa,playstore,keren banget bermanfaat bagi bangsa,"['keren', 'banget', 'bermanfaat', 'bagi', 'bangsa']",5,positive
+Good Aplication,playstore,good aplication,"['good', 'aplication']",9,positive
+Lebih mudah & praktis,playstore,lebih mudah  praktis,"['lebih', 'mudah', 'praktis']",4,positive
+Mantap pokok na mah..,playstore,mantap pokok na mah,"['mantap', 'pokok', 'nya', 'mah']",2,positive
+Very Good,playstore,very good,"['very', 'good']",9,positive
+Nice,playstore,nice,['nice'],4,positive
+semoga berhasil lapor,playstore,semoga berhasil lapor,"['semoga', 'berhasil', 'lapor']",12,positive
+Ujung2nya lapor online via web. 😄,playstore,ujungnya lapor online via web,"['ujung2nya', 'lapor', 'online', 'via', 'web']",9,positive
+Mantap 👍,playstore,mantap,['mantap'],5,positive
+Good job Terimakasih DJP,playstore,good job terimakasih djp,"['good', 'job', 'terimakasih', 'djp']",14,positive
+Ok jugga,playstore,ok jugga,"['ok', 'jugga']",4,positive
+Oke lah,playstore,oke lah,"['oke', 'lah']",18,positive
+dicoba,playstore,dicoba,['dicoba'],2,positive
+I thank you Google,playstore,i thank you google,"['i', 'thank', 'you', 'google']",4,positive
+bagus dan mantap,playstore,bagus dan mantap,"['bagus', 'dan', 'mantap']",1,positive
+"Terimakasih.., semoga kedepan makin meningkat manfaatnya.",playstore,terimakasih semoga kedepan makin meningkat manfaatnya,"['terimakasih', 'semoga', 'kedepan', 'makin', 'meningkat', 'manfaatnya']",10,positive
+Ok..,playstore,ok,['ok'],4,positive
+Dicoba dulu semoga berhasil,playstore,dicoba dulu semoga berhasil,"['dicoba', 'dulu', 'semoga', 'berhasil']",5,positive
+Oke mantap,playstore,oke mantap,"['oke', 'mantap']",14,positive
+Simple dan bermanfaat,playstore,simple dan bermanfaat,"['simple', 'dan', 'bermanfaat']",12,positive
+goood,playstore,goood,['goood'],9,positive
+Good aplilasi,playstore,good aplilasi,"['good', 'aplilasi']",9,positive
+is good,playstore,is good,"['is', 'good']",9,positive
+Mantappp,playstore,mantappp,['mantap'],5,positive
+Kereeen DJP 👍🏻,playstore,kereeen djp,"['keren', 'djp']",9,positive
+Mantap. Very helpfull👍,playstore,mantap very helpfull,"['mantap', 'very', 'helpfull']",5,positive
+Kereeeeennnnn,playstore,kereeeeennnnn,['kereeeeennnnn'],9,positive
+Lanjutkan,playstore,lanjutkan,['lanjutkan'],1,positive
+Semoga bermanfaat,playstore,semoga bermanfaat,"['semoga', 'bermanfaat']",9,positive
+GOOD,playstore,good,['good'],9,positive
+top..,playstore,top,['top'],9,positive
+"Mantabb , kerenn . Terus tingkatkan!",playstore,mantabb  kerenn  terus tingkatkan,"['mantab', 'keren', 'terus', 'tingkatkan']",9,positive
+Waw keren,playstore,waw keren,"['wow', 'keren']",18,positive
+Selamat untk para pemenang,instagram,selamat untk para pemenang,"['selamat', 'untuk', 'para', 'pemenang']",10,positive
+Mantaaaf..keren2,instagram,mantaaafkeren,['mantaaafkeren2'],9,positive
+Alhamdulillah setelah belasan hari menanti saldo coretax akhirnya bertambah dan bisa lapor pph 21,instagram,alhamdulillah setelah belasan hari menanti saldo coretax akhirnya bertambah dan bisa lapor pph,"['alhamdulillah', 'setelah', 'belasan', 'hari', 'menanti', 'saldo', 'coretax', 'akhirnya', 'bertambah', 'dan', 'bisa', 'lapor', 'pph', '21']",2,positive
+Halo kaka,instagram,halo kaka,"['halo', 'kakak']",1,positive
+lhah 2 hari post langsung deadline,instagram,lhah  hari post langsung deadline,"['lhah', '2', 'hari', 'post', 'langsung', 'deadline']",3,positive
+Dalam RANGKAT?,instagram,dalam rangkat,"['dalam', 'rangkat']",3,positive
+@https_shn boleh ni wkwkw,instagram,httpsshn boleh ni wkwkw,"['httpsshn', 'boleh', 'nih', 'wkwkw']",2,positive
+Selamat Hari Ibu  #UangKita berperan dalam mendorong kesejahteraan keluarga,instagram,selamat hari ibu  uangkita berperan dalam mendorong kesejahteraan keluarga,"['selamat', 'hari', 'ibu', 'uangkita', 'berperan', 'dalam', 'mendorong', 'kesejahteraan', 'keluarga']",1,positive
+"Sangat informatif, Keren",instagram,sangat informatif keren,"['sangat', 'informatif', 'keren']",4,positive
+"DJP semakin jaya dan maju
+Semakin baik dan canggih dalam menggali dan mencari potensi pajak utk Penerimaan Negara",instagram,"djp semakin jaya dan maju
+semakin baik dan canggih dalam menggali dan mencari potensi pajak utk penerimaan negara","['djp', 'semakin', 'jaya', 'dan', 'maju', 'semakin', 'baik', 'dan', 'canggih', 'dalam', 'menggali', 'dan', 'mencari', 'potensi', 'pajak', 'untuk', 'penerimaan', 'negara']",1,positive
+PPN MEMPERKUAT OLIGARKI,instagram,ppn memperkuat oligarki,"['ppn', 'memperkuat', 'oligarki']",3,positive
+"Kemarin2 benerin data coretax, mau ganti email, lah dimintain nama ibu sekarang",instagram,kemarin benerin data coretax mau ganti email lah dimintain nama ibu sekarang,"['kemarin2', 'benerin', 'data', 'coretax', 'mau', 'ganti', 'email', 'lah', 'dimintain', 'nama', 'ibu', 'sekarang']",11,positive
+Itu kerja tengah malam suee,instagram,itu kerja tengah malam suee,"['itu', 'kerja', 'tengah', 'malam', 'suee']",1,positive
+Selamat buat Pak Kimul dan jajaran KPP Pratama Palu,instagram,selamat buat pak kimul dan jajaran kpp pratama palu,"['selamat', 'buat', 'pak', 'kimul', 'dan', 'jajaran', 'kpp', 'pratama', 'palu']",6,positive
+mantap infonyo min,instagram,mantap infonyo min,"['mantap', 'infonyo', 'min']",5,positive
+Terimakasih infonya..,instagram,terimakasih infonya,"['terimakasih', 'infonya']",5,positive
+Kereenn bangettt infograsinyaa  yuukkk buruan lapor SPT,instagram,kereenn bangettt infograsinyaa  yuukkk buruan lapor spt,"['keren', 'banget', 'infograsinyaa', 'yuukkk', 'buruan', 'lapor', 'seperti']",9,positive
+Ok,instagram,ok,['ok'],4,positive
+Dapat juga intruksi pencitraan,instagram,dapat juga intruksi pencitraan,"['dapat', 'juga', 'intruksi', 'pencitraan']",9,positive
+Lah,instagram,lah,['lah'],9,positive
+"Giliran gw email, ga pernah dijawab. Minta email benerny atuh min..yg bakal dibalas",instagram,giliran gw email ga pernah dijawab minta email benerny atuh minyg bakal dibalas,"['giliran', 'gue', 'email', 'tidak', 'pernah', 'dijawab', 'meminta', 'email', 'benerny', 'atuh', 'minyg', 'bakal', 'dibalas']",14,positive
+"min, kawan aku judul skripsinya bahas pph final min @elitameivi",instagram,min kawan aku judul skripsinya bahas pph final min elitameivi,"['min', 'kawan', 'aku', 'judul', 'skripsinya', 'bahas', 'pph', 'final', 'min', 'elitameivi']",1,positive
+Min nilai Psikotes kapan keluar?,instagram,min nilai psikotes kapan keluar,"['min', 'nilai', 'psikotes', 'kapan', 'keluar']",2,positive
+Sip mantap,instagram,sip mantap,"['sip', 'mantap']",5,positive
+Selamat memperingati Maulid Nabi Muhammad Saw. Semoga kita semua selalu menjadi pribadi yang bertaqwa kepada Allah SWT,instagram,selamat memperingati maulid nabi muhammad saw semoga kita semua selalu menjadi pribadi yang bertaqwa kepada allah swt,"['selamat', 'memperingati', 'maulid', 'nabi', 'muhammad', 'saw', 'semoga', 'kita', 'semua', 'selalu', 'menjadi', 'pribadi', 'yang', 'bertaqwa', 'kepada', 'allah', 'swt']",4,positive
+"Libe chat, juga yg balas bot.",instagram,libe chat juga yg balas bot,"['libe', 'chat', 'juga', 'yang', 'balas', 'bot']",2,positive
+Selamat hari kesaktian pancasila 1 okt 2023,instagram,selamat hari kesaktian pancasila  okt,"['selamat', 'hari', 'kesaktian', 'pancasila', '1', 'okt', '2023']",5,positive
+artis @ruthgracep,instagram,artis ruthgracep,"['artis', 'ruthgracep']",2,positive
+Wah! Selamat untuk para pemenang,instagram,wah selamat untuk para pemenang,"['wah', 'selamat', 'untuk', 'para', 'pemenang']",7,positive
+Selamatt buat para pemenang!,instagram,selamatt buat para pemenang,"['selamatt', 'buat', 'para', 'pemenang']",6,positive
+Keren DJP RI dan KEMENKEU RI...terima kasih atas apresiasinya...semoga perpajakan Indonesia semakin baik...,instagram,keren djp ri dan kemenkeu riterima kasih atas apresiasinyasemoga perpajakan indonesia semakin baik,"['keren', 'djp', 'ri', 'dan', 'kemenkeu', 'riterima', 'kasih', 'atas', 'apresiasinyasemoga', 'perpajakan', 'indonesia', 'semakin', 'baik']",5,positive
+Wahhh selamat para pemenang!,instagram,wahhh selamat para pemenang,"['wah', 'selamat', 'para', 'pemenang']",7,positive
+Alhamdulillah.,instagram,alhamdulillah,['alhamdulillah'],5,positive
+Ayo tetap optimis,instagram,ayo tetap optimis,"['ayo', 'tetap', 'optimis']",7,positive
+Wkwkwkwk aja lah sebagai sysadmin..,instagram,wkwkwkwk aja lah sebagai sysadmin,"['wkwkwkwk', 'saja', 'lah', 'sebagai', 'sysadmin']",3,positive
+Kereenn... lanjutkeun....,instagram,kereenn lanjutkeun,"['keren', 'lanjutkeun']",9,positive
+Congrats!,instagram,congrats,['congrats'],3,positive
+"Selamaat untuk DJP, semoga prestasi dalam inovasinya semakin meluaskan dan mendalamkan kemanfaatannya.. untuk Indonesia",instagram,selamaat untuk djp semoga prestasi dalam inovasinya semakin meluaskan dan mendalamkan kemanfaatannya untuk indonesia,"['selamaat', 'untuk', 'djp', 'semoga', 'prestasi', 'dalam', 'inovasinya', 'semakin', 'meluaskan', 'dan', 'mendalamkan', 'kemanfaatannya', 'untuk', 'indonesia']",5,positive
+Pengumuman pemenangnya kapan minn?,instagram,pengumuman pemenangnya kapan minn,"['pengumuman', 'pemenangnya', 'kapan', 'minn']",1,positive
+Buku ceritanya enggak sekalian min?,instagram,buku ceritanya enggak sekalian min,"['buku', 'ceritanya', 'enggak', 'sekalian', 'min']",2,positive
+Tapi pengaruhi harga barang juga. Merchant bakal menaikkan harganya,instagram,tapi pengaruhi harga barang juga merchant bakal menaikkan harganya,"['tapi', 'pengaruhi', 'harga', 'barang', 'juga', 'merchant', 'bakal', 'menaikkan', 'harganya']",3,positive
+joss lanjutkan pak,instagram,joss lanjutkan pak,"['joss', 'lanjutkan', 'pak']",1,positive
+Josss,instagram,josss,['josss'],9,positive
+Wow ini jepretan @gry.rmnd? Mantap kaliii,instagram,wow ini jepretan gryrmnd mantap kaliii,"['wow', 'ini', 'jepretan', 'gryrmnd', 'mantap', 'kali']",5,positive
+Mantap mantap mantap core tax ini,instagram,mantap mantap mantap core tax ini,"['mantap', 'mantap', 'mantap', 'core', 'tax', 'ini']",6,positive
+Kalau kantor pusat libur juga berarti ya ?,instagram,kalau kantor pusat libur juga berarti ya,"['kalau', 'kantor', 'pusat', 'libur', 'juga', 'berarti', 'ya']",6,positive
+Adminnya punya selera lagu asik,instagram,adminnya punya selera lagu asik,"['adminnya', 'punya', 'selera', 'lagu', 'asik']",12,positive
+@tsaabit97 @imamfachrial @hilminugroho12 kuy latihan convert XML,instagram,tsaabit imamfachrial hilminugroho kuy latihan convert xml,"['tsaabit97', 'imamfachrial', 'hilminugroho12', 'yuk', 'latihan', 'convert', 'xml']",2,positive
+"Selamat punya Dirjen baru....
+Semoga semakin baik dan bersih DJP",instagram,"selamat punya dirjen baru
+semoga semakin baik dan bersih djp","['selamat', 'punya', 'dirjen', 'baru', 'semoga', 'semakin', 'baik', 'dan', 'bersih', 'djp']",9,positive
+congrats all,instagram,congrats all,"['congrats', 'all']",3,positive
+Selamat @ikhsansnl @smandoeta,instagram,selamat ikhsansnl smandoeta,"['selamat', 'ikhsansnl', 'smandoeta']",5,positive
+"Congrats @sman2tangerang , proud alumnus",instagram,congrats smantangerang  proud alumnus,"['congrats', 'sman2tangerang', 'proud', 'alumnus']",8,positive
+Mantapp,instagram,mantapp,['mantap'],5,positive
+keren,instagram,keren,['keren'],9,positive
+Mantap,instagram,mantap,['mantap'],5,positive
+Kerennn,instagram,kerennn,['keren'],9,positive
+Puncak ujian kesabaran dalam kehidupan manusia adalah CORETAX percayalah.,instagram,puncak ujian kesabaran dalam kehidupan manusia adalah coretax percayalah,"['puncak', 'ujian', 'kesabaran', 'dalam', 'kehidupan', 'manusia', 'adalah', 'coretax', 'percayalah']",9,positive
+"Mau lapor ppn nih, tombol postingnya kaga update2",instagram,mau lapor ppn nih tombol postingnya kaga update,"['mau', 'lapor', 'ppn', 'nih', 'tombol', 'postingnya', 'kagak', 'update2']",5,positive
+"Melalui CireTax ??,",instagram,melalui ciretax,"['melalui', 'ciretax']",3,positive
+"Rumus Excel Cara Menghitung PPh 21 TER Tarif Efektif Rata-rata Efektif 1 Januari 2024
+https://www.youtube.com/watch?v=jBJS9vzTQH8",instagram,"rumus excel cara menghitung pph  ter tarif efektif ratarata efektif  januari 
+httpswwwyoutubecomwatchvjbjsvztqh","['rumus', 'excel', 'cara', 'menghitung', 'pph', '21', 'ter', 'tarif', 'efektif', 'ratarata', 'efektif', '1', 'januari', '2024', 'httpswwwyoutubecomwatchvjbjs9vztqh8']",10,positive
+Congrats temen-temen,instagram,congrats tementemen,"['congrats', 'tementemen']",3,positive
+"Selamat hari pajak, semoga penerimaan pajak tahun 2023 mencapai atau bahkan melebihi target dan semoga penggunaannya juga sesuai dan berkeadilan untuk seluruh lapisan masyarakat.",instagram,selamat hari pajak semoga penerimaan pajak tahun  mencapai atau bahkan melebihi target dan semoga penggunaannya juga sesuai dan berkeadilan untuk seluruh lapisan masyarakat,"['selamat', 'hari', 'pajak', 'semoga', 'penerimaan', 'pajak', 'tahun', '2023', 'mencapai', 'atau', 'bahkan', 'melebihi', 'target', 'dan', 'semoga', 'penggunaannya', 'juga', 'sesuai', 'dan', 'berkeadilan', 'untuk', 'seluruh', 'lapisan', 'masyarakat']",2,positive
+Alhamdulillah bertepatan juga dengan hari kelahiranku 14 juli. Semoga tetep sukses,instagram,alhamdulillah bertepatan juga dengan hari kelahiranku  juli semoga tetep sukses,"['alhamdulillah', 'bertepatan', 'juga', 'dengan', 'hari', 'kelahiranku', '14', 'juli', 'semoga', 'tetap', 'sukses']",20,positive
+Indonesia cepat..ditangan yg tepat...  Indonesia semakin mantab...,instagram,indonesia cepatditangan yg tepat  indonesia semakin mantab,"['indonesia', 'cepatditangan', 'yang', 'tepat', 'indonesia', 'semakin', 'mantab']",6,positive
+Hasil dari SP2DK... jos...,instagram,hasil dari spdk jos,"['hasil', 'dari', 'sp2dk', 'jos']",9,positive
+4500 triliyun SUKSES,instagram,triliyun sukses,"['4500', 'triliyun', 'sukses']",9,positive
+Mantapp @dianwahyu54,instagram,mantapp dianwahyu,"['mantap', 'dianwahyu54']",5,positive
+"Udah bayar suruh lapor, lah kerjanya ngapain?",instagram,udah bayar suruh lapor lah kerjanya ngapain,"['sudah', 'bayar', 'suruh', 'lapor', 'lah', 'kerjanya', 'mengapai']",4,positive
+ayoo lapor pjak untuk memperkaya pejabat...salam Rubicon,instagram,ayoo lapor pjak untuk memperkaya pejabatsalam rubicon,"['ayo', 'lapor', 'pjak', 'untuk', 'memperkaya', 'pejabatsalam', 'rubicon']",4,positive
+"masyaallah tabarakallah, terimakasih atas informasinya",instagram,masyaallah tabarakallah terimakasih atas informasinya,"['masyaallah', 'tabarakallah', 'terimakasih', 'atas', 'informasinya']",3,positive
+bisnis otp ditjenpajakri,instagram,bisnis otp ditjenpajakri,"['bisnis', 'otp', 'ditjenpajakri']",3,positive
+pendalaman… gimana mau coretax min..,instagram,pendalaman gimana mau coretax min,"['pendalaman', 'bagaimana', 'mau', 'coretax', 'min']",3,positive
+game sifatnya software atau boleh board game?,instagram,game sifatnya software atau boleh board game,"['game', 'sifatnya', 'software', 'atau', 'boleh', 'board', 'game']",6,positive
+"Ciyee posting ulang. Apapun postingannya, komennya tetap corestress",instagram,ciyee posting ulang apapun postingannya komennya tetap corestress,"['ciyee', 'posting', 'ulang', 'apapun', 'postingannya', 'komennya', 'tetap', 'corestress']",3,positive
+mantab,instagram,mantab,['mantab'],9,positive
+Andai ku Gayus Tambunaaaann,instagram,andai ku gayus tambunaaaann,"['andai', 'ku', 'gayus', 'tambunaaaann']",2,positive
+kerenn,instagram,kerenn,['keren'],9,positive
+Keren,instagram,keren,['keren'],9,positive
+Selamat bestiee @nandadcahya,instagram,selamat bestiee nandadcahya,"['selamat', 'bestiee', 'nandadcahya']",5,positive
+"Format STP apakah bisa lebih informatif, misal ada STP telat lapor PPh 23, mohon di STP juga diberikan keterangan due date lapor dan Kapan WP melaporkan SPTmya sehingga lebih informatif",instagram,format stp apakah bisa lebih informatif misal ada stp telat lapor pph  mohon di stp juga diberikan keterangan due date lapor dan kapan wp melaporkan sptmya sehingga lebih informatif,"['format', 'setiap', 'apakah', 'bisa', 'lebih', 'informatif', 'misal', 'ada', 'setiap', 'telat', 'lapor', 'pph', '23', 'mohon', 'di', 'setiap', 'juga', 'diberikan', 'keterangan', 'due', 'date', 'lapor', 'dan', 'kapan', 'wp', 'melaporkan', 'sptmya', 'sehingga', 'lebih', 'informatif']",1,positive
+Alhamdulillah,instagram,alhamdulillah,['alhamdulillah'],5,positive
+Terima kasih informasinya,instagram,terima kasih informasinya,"['terima', 'kasih', 'informasinya']",3,positive
+Semoga membawa kebaikan buat seluruh rakyat,instagram,semoga membawa kebaikan buat seluruh rakyat,"['semoga', 'membawa', 'kebaikan', 'buat', 'seluruh', 'rakyat']",5,positive
+yuk bersama kita dukung kebijakan pemerintah,instagram,yuk bersama kita dukung kebijakan pemerintah,"['yuk', 'bersama', 'kita', 'dukung', 'kebijakan', 'pemerintah']",14,positive
+"Min, coretax min tolong diperbaiki .......",instagram,min coretax min tolong diperbaiki,"['min', 'coretax', 'min', 'tolong', 'diperbaiki']",7,positive
+@erlinenatalie kuyyy,instagram,erlinenatalie kuyyy,"['erlinenatalie', 'yuk']",4,positive
+Kereeen....,instagram,kereeen,['keren'],9,positive
+"Waah, ada Bu Sri Mulyani  ayo Pak ajakin debat @thomasramdhan",instagram,waah ada bu sri mulyani  ayo pak ajakin debat thomasramdhan,"['wah', 'ada', 'bu', 'sri', 'mulyani', 'ayo', 'pak', 'mengajak', 'debat', 'thomasramdhan']",1,positive
+Waw,instagram,waw,['wow'],9,positive
+ashiappppppppp....... akhirnya rilis juga kontennya.....,instagram,ashiappppppppp akhirnya rilis juga kontennya,"['ashiappppppppp', 'akhirnya', 'rilis', 'juga', 'kontennya']",12,positive
+Siap coach @nandyarizky,instagram,siap coach nandyarizky,"['siap', 'coach', 'nandyarizky']",1,positive
+Keren @riandanuprakoso … Congrats…,instagram,keren riandanuprakoso  congrats,"['keren', 'riandanuprakoso', 'congrats']",12,positive
+mantap,instagram,mantap,['mantap'],5,positive
+Semoga amanah..,instagram,semoga amanah,"['semoga', 'amanah']",5,positive
+Rakyat bangga,instagram,rakyat bangga,"['rakyat', 'bangga']",3,positive
+kalo pensiunan PNS guru apakah dapat juga min?,instagram,kalo pensiunan pns guru apakah dapat juga min,"['kalau', 'pensiunan', 'pns', 'guru', 'apakah', 'dapat', 'juga', 'min']",9,positive
+Selamat @rimbudz,instagram,selamat rimbudz,"['selamat', 'rimbudz']",5,positive
+Alhamdulillah mari kita rayakan siuuuuuuu siuuuuu siuuuu,instagram,alhamdulillah mari kita rayakan siuuuuuuu siuuuuu siuuuu,"['alhamdulillah', 'mari', 'kita', 'rayakan', 'siuuuuuuu', 'siuuuuu', 'siuuuu']",4,positive
+Signing_in_progres muluu nih mau lapor spt,instagram,signinginprogres muluu nih mau lapor spt,"['signinginprogres', 'muluu', 'nih', 'mau', 'lapor', 'seperti']",7,positive
+Tombol bayar & lapor kemana?,instagram,tombol bayar  lapor kemana,"['tombol', 'bayar', 'lapor', 'kemana']",6,positive
+Perubahan email ndak bisa ?,instagram,perubahan email ndak bisa,"['perubahan', 'email', 'indak', 'bisa']",4,positive
+Terima kasih,instagram,terima kasih,"['terima', 'kasih']",1,positive
+Terbaik..,instagram,terbaik,['terbaik'],5,positive
+Proud of youuu,instagram,proud of youuu,"['proud', 'of', 'youuu']",5,positive
+Selamat buat DJP,instagram,selamat buat djp,"['selamat', 'buat', 'djp']",6,positive
+keren kali apalagi yg no 8  @faizinurfaiz,instagram,keren kali apalagi yg no   faizinurfaiz,"['keren', 'kali', 'apalagi', 'yang', 'no', '8', 'faizinurfaiz']",4,positive
+@yudistira_r ada @yaafina mantul,instagram,yudistirar ada yaafina mantul,"['yudistirar', 'ada', 'yaafina', 'mantul']",6,positive
+proud of uuuu @_nurulhnfh,instagram,proud of uuuu nurulhnfh,"['proud', 'of', 'uuuu', 'nurulhnfh']",5,positive
+Terimakasih bung  @noeg_panji,instagram,terimakasih bung  noegpanji,"['terimakasih', 'bung', 'noegpanji']",5,positive
+Semoga Berkah,instagram,semoga berkah,"['semoga', 'berkah']",4,positive
+Tolong terbitin PMK utk pembebasan Sanksi telat bayar n lapor lah krn sistem kalian....,instagram,tolong terbitin pmk utk pembebasan sanksi telat bayar n lapor lah krn sistem kalian,"['tolong', 'terbitin', 'pmk', 'untuk', 'pembebasan', 'sanksi', 'telat', 'bayar', 'n', 'lapor', 'lah', 'karena', 'sistem', 'kalian']",1,positive
+Boleh spill hasilnya min,instagram,boleh spill hasilnya min,"['boleh', 'spill', 'hasilnya', 'min']",2,positive
+Kereen bageeeet,instagram,kereen bageeeet,"['keren', 'bageeeet']",9,positive
+Congrats teman-teman!,instagram,congrats temanteman,"['congrats', 'temanteman']",3,positive
+"Alhamdulillah kerja keras terbayar, congratulation dedekkk @d____iaa",instagram,alhamdulillah kerja keras terbayar congratulation dedekkk diaa,"['alhamdulillah', 'kerja', 'keras', 'terbayar', 'congratulation', 'dedekkk', 'dia']",4,positive
+Alhamdulillah... congrats @d____iaa,instagram,alhamdulillah congrats diaa,"['alhamdulillah', 'congrats', 'dia']",5,positive
+Selamat bapak ibu,instagram,selamat bapak ibu,"['selamat', 'bapak', 'ibu']",5,positive
+Kereen,instagram,kereen,['keren'],9,positive
+Sy mau lapor pak,instagram,sy mau lapor pak,"['saya', 'mau', 'lapor', 'pak']",5,positive
+Wuihhh keren kak @innnayah selamat yaa,instagram,wuihhh keren kak innnayah selamat yaa,"['wuihhh', 'keren', 'kak', 'innnayah', 'selamat', 'ya']",5,positive
+Wahhh selamat!!,instagram,wahhh selamat,"['wah', 'selamat']",2,positive
+minta efin dong,instagram,minta efin dong,"['meminta', 'efin', 'dong']",1,positive
+Mantap lagi lagi Mantap ....,instagram,mantap lagi lagi mantap,"['mantap', 'lagi', 'lagi', 'mantap']",4,positive
+Mantap  semoga rakyat sejahtera,instagram,mantap  semoga rakyat sejahtera,"['mantap', 'semoga', 'rakyat', 'sejahtera']",5,positive
+Coretaxnya beresin yuuu,instagram,coretaxnya beresin yuuu,"['coretaxnya', 'beresin', 'yuk']",4,positive
+Terima kasih Pak Suryo dan selamat datang Pak Bimo.,instagram,terima kasih pak suryo dan selamat datang pak bimo,"['terima', 'kasih', 'pak', 'suryo', 'dan', 'selamat', 'datang', 'pak', 'bimo']",2,positive
+"Lapor pak. Mau donlot lagu ""monster"" dmn ya pak?",instagram,lapor pak mau donlot lagu monster dmn ya pak,"['lapor', 'pak', 'mau', 'donlot', 'lagu', 'monster', 'dimana', 'ya', 'pak']",1,positive
+Tetap semangat,instagram,tetap semangat,"['tetap', 'semangat']",2,positive
+"Wkwkwk udah mau hari weekend aja nih, kumpulin karyawan dong kerja bakti bersih bersih dulu yuk",instagram,wkwkwk udah mau hari weekend aja nih kumpulin karyawan dong kerja bakti bersih bersih dulu yuk,"['wkwkwk', 'sudah', 'mau', 'hari', 'weekend', 'saja', 'nih', 'kumpulin', 'karyawan', 'dong', 'kerja', 'bakti', 'bersih', 'bersih', 'dulu', 'yuk']",3,positive
+Minimal kerja yuk ah,instagram,minimal kerja yuk ah,"['minimal', 'kerja', 'yuk', 'ah']",3,positive
+WEH MAU KERJA WEH ! BENERIN NAPAAAA,instagram,weh mau kerja weh  benerin napaaaa,"['weh', 'mau', 'kerja', 'weh', 'benerin', 'napaaaa']",1,positive
+Iklan gratis pak ? Wkwk,instagram,iklan gratis pak  wkwk,"['iklan', 'gratis', 'pak', 'wkwk']",4,positive
+"Heyyy bosss , bpjs saya juga iuran  jangan gitu ah.",instagram,heyyy bosss  bpjs saya juga iuran  jangan gitu ah,"['heyyy', 'bosss', 'bpjs', 'saya', 'juga', 'iuran', 'jangan', 'begitu', 'ah']",3,positive
+"Gratis sih, tapiiii.....",instagram,gratis sih tapiiii,"['gratis', 'sih', 'tapiiii']",4,positive
+Jir lahhh,instagram,jir lahhh,"['jir', 'lah']",6,positive
+kereen mudah dimengerti,instagram,kereen mudah dimengerti,"['keren', 'mudah', 'dimengerti']",8,positive
+Kalau hibah selain tanah dan bangunan tarifnya berapa,instagram,kalau hibah selain tanah dan bangunan tarifnya berapa,"['kalau', 'hibah', 'selain', 'tanah', 'dan', 'bangunan', 'tarifnya', 'berapa']",3,positive
+thankyouu buku tahunannya keren!,instagram,thankyouu buku tahunannya keren,"['thankyouu', 'buku', 'tahunannya', 'keren']",9,positive
+Kapan sistemnya normal?,instagram,kapan sistemnya normal,"['kapan', 'sistemnya', 'normal']",1,positive
+Ternyata miminnya pemain cocoki juga,instagram,ternyata miminnya pemain cocoki juga,"['ternyata', 'miminnya', 'pemain', 'cocoki', 'juga']",6,positive
+"Halo Bapak / Ibu Yth,
+Ijin menyampaikan, apakah website Djponline sedang bermalasah?",instagram,"halo bapak  ibu yth
+ijin menyampaikan apakah website djponline sedang bermalasah","['halo', 'bapak', 'ibu', 'yth', 'ijin', 'menyampaikan', 'apakah', 'website', 'djponline', 'sedang', 'bermalasah']",4,positive
+"Assalamualaikum, pak email otp pada kemanaaaaa",instagram,assalamualaikum pak email otp pada kemanaaaaa,"['assalamualaikum', 'pak', 'email', 'otp', 'pada', 'kemanaaaaa']",9,positive
+"Makasih infonya, Mandiri is the best",instagram,makasih infonya mandiri is the best,"['terima kasih', 'infonya', 'mandiri', 'is', 'the', 'best']",2,positive
+@nnaa.jjwwaa ikut yuk,instagram,nnaajjwwaa ikut yuk,"['nnaajjwwaa', 'ikut', 'yuk']",1,positive
+Kak mohon respon chat kita,instagram,kak mohon respon chat kita,"['kak', 'mohon', 'respon', 'chat', 'kita']",3,positive
+Ekpresiku pas lihat bupot :,instagram,ekpresiku pas lihat bupot,"['ekpresiku', 'pas', 'lihat', 'bupot']",6,positive
+"Menunggu surat keputusan PPN 12% dan UMKM 0,5%",instagram,menunggu surat keputusan ppn  dan umkm,"['menunggu', 'surat', 'keputusan', 'ppn', '12', 'dan', 'umkm', '05']",1,positive
+Bismillah,instagram,bismillah,['bismillah'],4,positive
+Maksimal 3 juta peetahun itu per karyawan atau seluruh karyawan yah pak untuk bingkisan hari rayanya,instagram,maksimal  juta peetahun itu per karyawan atau seluruh karyawan yah pak untuk bingkisan hari rayanya,"['maksimal', '3', 'juta', 'peetahun', 'itu', 'per', 'karyawan', 'atau', 'seluruh', 'karyawan', 'ya', 'pak', 'untuk', 'bingkisan', 'hari', 'rayanya']",4,positive
+Bernafas dipajakin juga lah,instagram,bernafas dipajakin juga lah,"['bernafas', 'dipajakin', 'juga', 'lah']",9,positive
+Good luck tim UGM...,instagram,good luck tim ugm,"['good', 'luck', 'tim', 'ugm']",9,positive
+"Kl amanah, lah kalo dananya belok??",instagram,kl amanah lah kalo dananya belok,"['kalau', 'amanah', 'lah', 'kalau', 'dananya', 'belok']",15,positive
+Hahahaa faktanya buat IKN dan makan siang gratis,instagram,hahahaa faktanya buat ikn dan makan siang gratis,"['hahahaa', 'faktanya', 'buat', 'ikn', 'dan', 'makan', 'siang', 'gratis']",4,positive
+Mending urus dulu lah itu login DJP MFA. Ngide amat sih pak Hantriono Joko Susilo,instagram,mending urus dulu lah itu login djp mfa ngide amat sih pak hantriono joko susilo,"['mending', 'urus', 'dulu', 'lah', 'itu', 'login', 'djp', 'mfa', 'ngide', 'amat', 'sih', 'pak', 'hantriono', 'joko', 'susilo']",8,positive
+TERBAIK!,instagram,terbaik,['terbaik'],5,positive
+Jadi kenyang dong pajaknya berapa %,instagram,jadi kenyang dong pajaknya berapa,"['jadi', 'kenyang', 'dong', 'pajaknya', 'berapa']",1,positive
+Foto pejabatnya mana?,instagram,foto pejabatnya mana,"['foto', 'pejabatnya', 'mana']",3,positive
+BERAPA PERSEN PAJAKNYA SETIAP MEDALINYA??,instagram,berapa persen pajaknya setiap medalinya,"['berapa', 'persen', 'pajaknya', 'setiap', 'medalinya']",2,positive
+So proud!,instagram,so proud,"['sok', 'proud']",5,positive
+"Waaah keren sekalii Mas @fauzi_fortuna , barakallah yaaaak",instagram,waaah keren sekalii mas fauzifortuna  barakallah yaaaak,"['waaah', 'keren', 'sekali', 'mas', 'fauzifortuna', 'barakallah', 'yaaaak']",8,positive
+Selamat ya untuk para Pemenang,instagram,selamat ya untuk para pemenang,"['selamat', 'ya', 'untuk', 'para', 'pemenang']",1,positive
+selamat,instagram,selamat,['selamat'],5,positive
+Alhamdulillah congrats kakkk @saviraindrianipr,instagram,alhamdulillah congrats kakkk saviraindrianipr,"['alhamdulillah', 'congrats', 'kak', 'saviraindrianipr']",8,positive
+kapan jg kamu penyuluhan realitas turjun lngusng ke publik???????????????????????????????,instagram,kapan jg kamu penyuluhan realitas turjun lngusng ke publik,"['kapan', 'juga', 'kamu', 'penyuluhan', 'realitas', 'turjun', 'lngusng', 'ke', 'publik']",6,positive
+Alhamdulillah dah lapor SPT tahunan,instagram,alhamdulillah dah lapor spt tahunan,"['alhamdulillah', 'sudah', 'lapor', 'seperti', 'tahunan']",4,positive
+Alhamdulillah sudah lapor SPT lebih awal,instagram,alhamdulillah sudah lapor spt lebih awal,"['alhamdulillah', 'sudah', 'lapor', 'seperti', 'lebih', 'awal']",3,positive
+Peraturannya boleh kak?,instagram,peraturannya boleh kak,"['peraturannya', 'boleh', 'kak']",2,positive
+Wow keren,instagram,wow keren,"['wow', 'keren']",18,positive
