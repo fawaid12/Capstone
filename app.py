@@ -226,8 +226,13 @@ def main():
 
         if selected_sentimen == "Semua":
             sentimen_counts = df_sentimen['sentiment'].value_counts()
-            st.subheader("Jumlah Komentar per Sentimen")
-            plot_bar(sentimen_counts, "Jumlah Komentar per Sentimen", "Sentimen", "Jumlah Komentar")
+    
+            st.subheader("📌 Ringkasan Komentar per Sentimen")
+
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Negatif", sentimen_counts.get('negative', 0))
+            col2.metric("Netral", sentimen_counts.get('neutral', 0))
+            col3.metric("Positif", sentimen_counts.get('positive', 0))
 
             for sent in ['positive', 'negative', 'neutral']:
                 st.subheader(f"Wordcloud Komentar {sent.capitalize()}")
