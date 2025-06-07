@@ -49,9 +49,7 @@ def preprocess_text(text):
     # Lowercase dan hapus karakter non alfabetik
     text = text.lower()
     text = re.sub(r'[^a-z\s]', '', text)# Tokenisasi dan filter stopword
-    words = text.split()
-    words = [stemmer.stem(word) for word in words if word not in stopwords]
-    return ' '.join(words)
+    text = stemmer.stem(text)  # Lakukan stemming
     return text
 
 def get_wordcloud(data, title):
