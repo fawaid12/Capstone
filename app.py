@@ -45,12 +45,12 @@ def load_data():
 
     return df_sentimen, df_all_topik
 
+
 def preprocess_text(text):
-    factory = StemmerFactory()
-    stemmer = factory.create_stemmer()
     text = text.lower()
-    text = re.sub(r'[^a-z\s]', '', text)
-    text = stemmer.stem(text)  # <- ini bagian yang mungkin error diam-diam
+    text = re.sub(r'[^a-z\s]', '', text)  # Hapus non-alfabet
+    text = stopword_remover.remove(text)
+    text = stemmer.stem(text)  # Lakukan stemming
     return text
 
 def get_wordcloud(data, title):
