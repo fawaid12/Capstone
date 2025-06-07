@@ -152,8 +152,8 @@ def main():
     vectorizer = load_vectorizer()
 
     # Sidebar dengan judul aplikasi
-    st.sidebar.title("📡 GovGauge.ID")
-    st.sidebar.markdown("**Analisis Kepuasan Layanan Pajak Digital & Manual**")
+    st.sidebar.title("📡 TaxGauge.ID")
+    st.sidebar.markdown("**Analisis Kepuasan Layanan Pajak Elektonik dan Non-Elektronik**")
 
     # Sidebar menu
     menu = st.sidebar.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
