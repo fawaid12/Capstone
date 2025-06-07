@@ -48,11 +48,16 @@ def load_data():
 
 
 def preprocess_text(text):
-    text = text.lower()
-    text = re.sub(r'[^a-z\s]', '', text)  # Hapus non-alfabet
-    text = stopword_remover.remove(text)
-    text = stemmer.stem(text)  # Lakukan stemming
-    return text
+    try:
+        text = str(text).lower()
+        text = re.sub(r'[^a-z\s]', '', text)
+        text = stopword_remover.remove(text)
+        text = stemmer.stem(text)
+        return text
+    except Exception as e:
+        # Tampilkan error di streamlit supaya bisa tahu masalahnya
+        st.error(f"Error di preprocess_text: {e}")
+        return ""
 
 def get_wordcloud(data, title):
     text = ' '.join(data)
