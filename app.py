@@ -55,7 +55,6 @@ def preprocess_text(text):
         text = stemmer.stem(text)
         return text
     except Exception as e:
-        # Tampilkan error di streamlit supaya bisa tahu masalahnya
         st.error(f"Error di preprocess_text: {e}")
         return ""
 
@@ -77,11 +76,23 @@ def plot_bar(data, title, xlabel, ylabel):
     plt.xticks(rotation=45)
     st.pyplot(plt)
 
+# --- Load Model & Vectorizer ---
+
+@st.cache_resource
+def load_model():
+    with open('svm_sentiment_model.pkl', 'rb') as f:
+        model = pickle.load(f)
+    return model
+
+@st.cache_resource
+def load_vectorizer():
+    with open('vectorizer.pkl', 'rb') as f:
+        vectorizer = pickle.load(f)
+    return vectorizer
+
 # Mengubah fungsi classify_sentiment untuk menerima vectorizer
 def classify_sentiment(text, model, vectorizer):
-    # Preprocess text
     text_proc = preprocess_text(text)
-    # Transform teks menjadi fitur vektor 2D
     text_vect = vectorizer.transform([text_proc])
     pred = model.predict(text_vect)[0]
     return pred
@@ -91,7 +102,6 @@ def classify_topic(text, topik_keywords):
     scores = {}
     for topik, keywords in topik_keywords.items():
         scores[topik] = sum(text_proc.count(k) for k in keywords)
-    # Ambil topik dengan skor tertinggi
     topik_terpilih = max(scores, key=scores.get)
     if scores[topik_terpilih] == 0:
         return "Tidak Teridentifikasi"
@@ -116,13 +126,6 @@ def plot_top_words(top_words, title):
     plt.tight_layout()
     st.pyplot(plt)
 
-# --- Load Model & Vectorizer ---
-@st.cache_resource
-def load_model():
-    with open('svm_sentiment_model.pkl', 'rb') as f:
-        model = pickle.load(f)
-    return model
-
 # --- Main App ---
 def main():
     st.set_page_config(page_title="Analisis Sentimen & Topik Komentar Aplikasi Pajak", layout="wide")
@@ -130,8 +133,8 @@ def main():
 
     # Load data, model, dan vectorizer
     df_sentimen, df_topik = load_data()
-    # Memuat model
     model = load_model()
+    vectorizer = load_vectorizer()
 
     # Sidebar menu
     menu = st.sidebar.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
@@ -143,7 +146,7 @@ def main():
     df_sentimen['cleaned'] = df_sentimen['content'].astype(str).apply(preprocess_text)
     df_topik['cleaned'] = df_topik['content'].astype(str).apply(preprocess_text)
 
-    # Topik keywords (ambil dari data topik, bisa disesuaikan)
+    # Topik keywords
     topik_keywords = {
         'Error-Aplikasi': ['error', 'bug', 'gagal', 'tidak', 'bisa', 'crash', 'macet', 'lambat'],
         'Login-NPWP-Daftar': ['login', 'npwp', 'daftar', 'akun', 'masuk', 'registrasi'],
@@ -158,11 +161,9 @@ def main():
         Analisis sentimen dan topik komentar pengguna aplikasi pajak bertujuan untuk memahami persepsi pengguna terhadap aplikasi, mengidentifikasi masalah utama, dan meningkatkan kualitas layanan.
         """)
 
-        # Total komentar
         total_komentar = len(df_sentimen)
         st.metric("Total Komentar", total_komentar)
 
-        # Komentar berdasarkan sentimen
         sentimen_counts = df_sentimen['sentiment'].value_counts()
         st.subheader("Distribusi Komentar Berdasarkan Sentimen")
         
@@ -172,7 +173,6 @@ def main():
         ax1.axis('equal')
         st.pyplot(fig1)
 
-        # Komentar berdasarkan topik
         topik_counts = df_topik['topik'].value_counts()
         st.subheader("Distribusi Komentar Berdasarkan Topik")
         
@@ -185,18 +185,15 @@ def main():
     elif menu == "Visualisasi Sentimen":
         st.header("📊 Visualisasi Berdasarkan Sentimen")
 
-        # Jumlah komentar per sentimen
         sentimen_counts = df_sentimen['sentiment'].value_counts()
         st.subheader("Jumlah Komentar per Sentimen")
         plot_bar(sentimen_counts, "Jumlah Komentar per Sentimen", "Sentimen", "Jumlah Komentar")
 
-        # Wordcloud per sentimen
         for sent in ['positive', 'negative', 'neutral']:
             st.subheader(f"Wordcloud Komentar {sent.capitalize()}")
             data_sent = df_sentimen[df_sentimen['sentiment'] == sent]['cleaned']
             get_wordcloud(data_sent, f"Wordcloud Komentar {sent.capitalize()}")
 
-        # Kata paling sering muncul per sentimen
         st.subheader("Kata Paling Sering Muncul per Sentimen")
         for sent in ['positive', 'negative', 'neutral']:
             st.markdown(f"**{sent.capitalize()}**")
@@ -207,25 +204,21 @@ def main():
     elif menu == "Visualisasi Topik":
         st.header("📊 Visualisasi Berdasarkan Topik")
 
-        # Jumlah komentar per topik
         topik_counts = df_topik['topik'].value_counts()
         st.subheader("Jumlah Komentar per Topik")
         plot_bar(topik_counts, "Jumlah Komentar per Topik", "Topik", "Jumlah Komentar")
 
-        # Wordcloud per topik
         for topik in topik_counts.index:
             st.subheader(f"Wordcloud Komentar {topik}")
             data_topik = df_topik[df_topik['topik'] == topik]['cleaned']
             get_wordcloud(data_topik, f"Wordcloud Komentar {topik}")
 
-        # Kata paling sering muncul per topik
         st.subheader("Kata Paling Sering Muncul per Topik")
         for topik in topik_counts.index:
             st.markdown(f"**{topik}**")
             data_topik = df_topik[df_topik['topik'] == topik]['cleaned']
             top_words = get_top_words(data_topik)
             plot_top_words(top_words, f"Top 10 Kata pada Topik {topik}")
-
 
 if __name__ == "__main__":
     main()
