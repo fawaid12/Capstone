@@ -142,8 +142,8 @@ def plot_top_words(top_words, title):
 
 # --- Main App ---
 def main():
-    st.set_page_config(page_title="Analisis Sentimen & Topik Komentar Aplikasi Pajak", layout="wide")
-    st.title("📊 Analisis Sentimen dan Topik Komentar Aplikasi Pajak")
+    st.set_page_config(page_title="Analisis Sentimen & Topik Terhadap Pelayanan Pajak", layout="wide")
+    st.title("📊 Analisis Sentimen dan Topik Terhadap Pelayanan Pajak")
 
     # Load data, model, dan vectorizer
     df_sentimen, df_topik = load_data()
@@ -152,7 +152,7 @@ def main():
 
     # Sidebar dengan judul aplikasi
     st.sidebar.title("📡 GovGauge.ID")
-    st.sidebar.markdown("**Analisis Layanan Pajak Digital & Manual**")
+    st.sidebar.markdown("**Analisis Kepuasan Layanan Pajak Digital & Manual**")
 
     # Sidebar menu
     menu = st.sidebar.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
