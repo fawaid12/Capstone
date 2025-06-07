@@ -8,13 +8,10 @@ import pickle
 import re
 from collections import Counter
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
-factory_stopword = StopWordRemoverFactory()
-stopword_remover = factory_stopword.create_stop_word_remover()
-
-factory_stemmer = StemmerFactory()
-stemmer = factory_stemmer.create_stemmer()
+# Inisialisasi stopword remover
+factory = StopWordRemoverFactory()
+stopword_remover = factory.create_stop_word_remover()
 
 # --- Fungsi Utility ---
 
@@ -52,7 +49,6 @@ def preprocess_text(text):
         text = str(text).lower()
         text = re.sub(r'[^a-z\s]', '', text)
         text = stopword_remover.remove(text)
-        text = stemmer.stem(text)
         return text
     except Exception as e:
         st.error(f"Error di preprocess_text: {e}")
