@@ -19,7 +19,7 @@ sastrawi_stopwords = set(factory.get_stop_words())
 # Tambahan stopword informal/slang yang umum di komentar
 custom_stopwords = {
     'gak', 'ga', 'aja', 'ya', 'nih', 'sih', 'nya', 'deh', 'loh', 
-    'dong', 'kok', 'kan', 'tau', 'punya', 'lu', 'gue', 'udah', 
+    'dong', 'kok', 'kan', 'tau', 'punya', 'lu', 'gue', 'udah', 'mau', 'yg',
     'cuma', 'biar', 'bgt', 'ampun', 'banget', 'mas', 'mbak', 'makasih', 'terimakasih', 'min'
 }
 
