@@ -11,8 +11,11 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 
 # Inisialisasi stemmer dan stopword remover
-stemmer = StemmerFactory().create_stemmer()
-stopword_remover = StopWordRemoverFactory().create_stop_word_remover()
+factory_stopword = StopWordRemoverFactory()
+stopword_remover = factory_stopword.create_stop_word_remover()
+
+factory_stemmer = StemmerFactory()
+stemmer = factory_stemmer.create_stemmer()
 
 # --- Fungsi Utility ---
 
