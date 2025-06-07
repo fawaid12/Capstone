@@ -248,15 +248,15 @@ def main():
                     plot_top_words(top_words, f"Top 10 Kata pada Sentimen {sent}")
                 else:
                     st.warning(f"Tidak ada data komentar untuk sentimen **{sent}**.")
-    else:
-        st.subheader(f"Visualisasi untuk Sentimen: {selected_sentimen.capitalize()}")
-        data_sent = df_filtered['cleaned']
-        if not data_sent.empty and data_sent.str.strip().any():
-            get_wordcloud(data_sent, f"Wordcloud Komentar {selected_sentimen.capitalize()}")
-            top_words = get_top_words(data_sent)
-            plot_top_words(top_words, f"Top 10 Kata pada Sentimen {selected_sentimen.capitalize()}")
         else:
-            st.warning(f"Tidak ada data komentar untuk sentimen **{selected_sentimen}**.")
+            st.subheader(f"Visualisasi untuk Sentimen: {selected_sentimen.capitalize()}")
+            data_sent = df_filtered['cleaned']
+            if not data_sent.empty and data_sent.str.strip().any():
+                get_wordcloud(data_sent, f"Wordcloud Komentar {selected_sentimen.capitalize()}")
+                top_words = get_top_words(data_sent)
+                plot_top_words(top_words, f"Top 10 Kata pada Sentimen {selected_sentimen.capitalize()}")
+            else:
+                st.warning(f"Tidak ada data komentar untuk sentimen **{selected_sentimen}**.")
 
 
     elif menu == "Visualisasi Topik":
