@@ -265,7 +265,7 @@ def main():
         
         st.subheader("📌 Ringkasan Komentar per Topik")
 
-        col1, col2, col3, col4, col5 = st.columns(4)
+        col1, col2, col3, col4, col5 = st.columns(5)
         col1.metric("Error-Aplikasi", sentimen_counts.get('Error-Aplikasi', 0))
         col2.metric("Login-NPWP-Daftar", sentimen_counts.get('Login-NPWP-Daftar', 0))
         col3.metric("Lapor_Pajak-SPT", sentimen_counts.get('Lapor_Pajak-SPT', 0))
