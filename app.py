@@ -7,6 +7,13 @@ from wordcloud import WordCloud
 import pickle
 import re
 from collections import Counter
+from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+
+# Inisialisasi stopword remover & stemmer
+stop_factory = StopWordRemoverFactory()
+stopwords = set(stop_factory.get_stop_words())
+stemmer = StemmerFactory().create_stemmer()
 
 # --- Fungsi Utility ---
 
@@ -41,7 +48,10 @@ def load_data():
 def preprocess_text(text):
     # Lowercase dan hapus karakter non alfabetik
     text = text.lower()
-    text = re.sub(r'[^a-z\s]', '', text)
+    text = re.sub(r'[^a-z\s]', '', text)# Tokenisasi dan filter stopword
+    words = text.split()
+    words = [stemmer.stem(word) for word in words if word not in stopwords]
+    return ' '.join(words)
     return text
 
 def get_wordcloud(data, title):
