@@ -61,16 +61,17 @@ def get_wordcloud(data, title):
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
     plt.title(title, fontsize=16)
-    st.pyplot(fig)
+    st.pyplot(plt)
 
 def plot_bar(data, title, xlabel, ylabel):
-    plt.figure(figsize=(8,5))
-    sns.barplot(x=data.index, y=data.values, palette='viridis')
-    plt.title(title, fontsize=16)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.xticks(rotation=45)
+    fig, ax = plt.subplots(figsize=(8,5))
+    sns.barplot(x=data.index, y=data.values, palette='viridis', ax=ax)
+    ax.set_title(title, fontsize=16)
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(ylabel)
+    ax.tick_params(axis='x', rotation=45)
     st.pyplot(fig)
+
 
 # --- Load Model & Vectorizer ---
 
@@ -120,7 +121,7 @@ def plot_top_words(top_words, title):
     plt.xlabel('Frekuensi')
     plt.ylabel('Kata')
     plt.tight_layout()
-    st.pyplot(fig)
+    st.pyplot(plt)
 
 # --- Main App ---
 def main():
