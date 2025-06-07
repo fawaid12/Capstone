@@ -254,44 +254,58 @@ def main():
                 st.warning(f"Tidak ada data komentar untuk sentimen **{selected_sentimen}**.")
 
     elif menu == "Visualisasi Topik":
-        st.header("📊 Visualisasi Berdasarkan Topik")
+    st.header("📊 Visualisasi Berdasarkan Topik")
 
-        if selected_topik and selected_topik != "Semua":
-            df_filtered = df_topik[df_topik['topik'] == selected_topik]
+    if selected_topik and selected_topik != "Semua":
+        df_filtered = df_topik[df_topik['topik'] == selected_topik]
+    else:
+        df_filtered = df_topik
+
+    topik_counts = df_filtered['topik'].value_counts()
+
+    st.subheader("📌 Ringkasan Komentar per Topik")
+    col1, col2, col3, col4, col5 = st.columns(5)
+    col1.metric("Error-Aplikasi", topik_counts.get('Error-Aplikasi', 0))
+    col2.metric("Login-NPWP-Daftar", topik_counts.get('Login-NPWP-Daftar', 0))
+    col3.metric("Lapor_Pajak-SPT", topik_counts.get('Lapor_Pajak-SPT', 0))
+    col4.metric("OTP-Verifikasi_Email", topik_counts.get('OTP-Verifikasi_Email', 0))
+    col5.metric("Pembayaran-Kantor_Pajak", topik_counts.get('Pembayaran-Kantor_Pajak', 0))
+
+    if selected_topik == "Semua":
+        for topik in topik_counts.index:
+            st.subheader(f"🧩 Wordcloud Komentar: {topik}")
+            data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
+
+            if data_topik.empty:
+                st.warning(f"Tidak ada komentar tersedia untuk topik: {topik}")
+                continue
+
+            get_wordcloud(data_topik, f"Wordcloud Komentar {topik}")
+
+        st.subheader("📌 Kata Paling Sering Muncul per Topik")
+        for topik in topik_counts.index:
+            st.markdown(f"**{topik}**")
+            data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
+
+            if data_topik.empty:
+                st.info(f"Tidak ada data untuk topik '{topik}'")
+                continue
+
+            top_words = get_top_words(data_topik)
+            plot_top_words(top_words, f"Top 10 Kata pada Topik {topik}")
+    else:
+        st.subheader(f"🧩 Wordcloud Komentar: {selected_topik}")
+        data_topik = df_filtered['cleaned'].dropna()
+
+        if data_topik.empty:
+            st.warning("Tidak ada komentar tersedia untuk topik ini.")
         else:
-            df_filtered = df_topik
-
-        topik_counts = df_filtered['topik'].value_counts()
-        
-        st.subheader("📌 Ringkasan Komentar per Topik")
-
-        col1, col2, col3, col4, col5 = st.columns(5)
-        col1.metric("Error-Aplikasi", topik_counts.get('Error-Aplikasi', 0))
-        col2.metric("Login-NPWP-Daftar", topik_counts.get('Login-NPWP-Daftar', 0))
-        col3.metric("Lapor_Pajak-SPT", topik_counts.get('Lapor_Pajak-SPT', 0))
-        col4.metric("OTP-Verifikasi_Email", topik_counts.get('OTP-Verifikasi_Email', 0))
-        col5.metric("Pembayaran-Kantor_Pajak", topik_counts.get('Pembayaran-Kantor_Pajak', 0))
-
-        if selected_topik == "Semua":
-            for topik in topik_counts.index:
-                st.subheader(f"Wordcloud Komentar {topik}")
-                data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned']
-                get_wordcloud(data_topik, f"Wordcloud Komentar {topik}")
-
-            st.subheader("Kata Paling Sering Muncul per Topik")
-            for topik in topik_counts.index:
-                st.markdown(f"**{topik}**")
-                data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned']
-                top_words = get_top_words(data_topik)
-                plot_top_words(top_words, f"Top 10 Kata pada Topik {topik}")
-        else:
-            st.subheader(f"Wordcloud Komentar {selected_topik}")
-            data_topik = df_filtered['cleaned']
             get_wordcloud(data_topik, f"Wordcloud Komentar {selected_topik}")
 
-            st.subheader(f"Top Kata pada Topik {selected_topik}")
+            st.subheader(f"📌 Top Kata pada Topik: {selected_topik}")
             top_words = get_top_words(data_topik)
             plot_top_words(top_words, f"Top 10 Kata pada Topik {selected_topik}")
+
 
 if __name__ == "__main__":
     main()
