@@ -266,11 +266,11 @@ def main():
         st.subheader("📌 Ringkasan Komentar per Topik")
 
         col1, col2, col3, col4, col5 = st.columns(5)
-        col1.metric("Error-Aplikasi", sentimen_counts.get('Error-Aplikasi', 0))
-        col2.metric("Login-NPWP-Daftar", sentimen_counts.get('Login-NPWP-Daftar', 0))
-        col3.metric("Lapor_Pajak-SPT", sentimen_counts.get('Lapor_Pajak-SPT', 0))
-        col4.metric("OTP-Verifikasi_Email", sentimen_counts.get('OTP-Verifikasi_Email', 0))
-        col5.metric("Pembayaran-Kantor_Pajak", sentimen_counts.get('Pembayaran-Kantor_Pajak', 0))
+        col1.metric("Error-Aplikasi", topik_counts.get('Error-Aplikasi', 0))
+        col2.metric("Login-NPWP-Daftar", topik_counts.get('Login-NPWP-Daftar', 0))
+        col3.metric("Lapor_Pajak-SPT", topik_counts.get('Lapor_Pajak-SPT', 0))
+        col4.metric("OTP-Verifikasi_Email", topik_counts.get('OTP-Verifikasi_Email', 0))
+        col5.metric("Pembayaran-Kantor_Pajak", topik_counts.get('Pembayaran-Kantor_Pajak', 0))
 
         if selected_topik == "Semua":
             for topik in topik_counts.index:
