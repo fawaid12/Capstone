@@ -65,7 +65,7 @@ def get_wordcloud(data, title):
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
     plt.title(title, fontsize=16)
-    st.pyplot(plt)
+    st.pyplot(fig)
 
 def plot_bar(data, title, xlabel, ylabel):
     plt.figure(figsize=(8,5))
@@ -74,7 +74,7 @@ def plot_bar(data, title, xlabel, ylabel):
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.xticks(rotation=45)
-    st.pyplot(plt)
+    st.pyplot(fig)
 
 # --- Load Model & Vectorizer ---
 
@@ -124,7 +124,7 @@ def plot_top_words(top_words, title):
     plt.xlabel('Frekuensi')
     plt.ylabel('Kata')
     plt.tight_layout()
-    st.pyplot(plt)
+    st.pyplot(fig)
 
 # --- Main App ---
 def main():
