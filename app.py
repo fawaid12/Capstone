@@ -7,10 +7,9 @@ from wordcloud import WordCloud
 import pickle
 import re
 from collections import Counter
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
-# Inisialisasi stemmer dan stopword remover
 factory_stopword = StopWordRemoverFactory()
 stopword_remover = factory_stopword.create_stop_word_remover()
 
