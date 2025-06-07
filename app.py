@@ -219,39 +219,33 @@ def main():
         plt.tight_layout()
         st.pyplot(fig2)
 
+    # --- Menu: Visualisasi Sentimen ---
     elif menu == "Visualisasi Sentimen":
         st.header("📊 Visualisasi Berdasarkan Sentimen")
 
-        # Filter data berdasarkan pilihan
-        if selected_sentimen and selected_sentimen != "Semua":
-            df_filtered = df_sentimen[df_sentimen['sentiment'] == selected_sentimen.lower()]
-        else:
-            df_filtered = df_sentimen
-
-        sentimen_counts = df_filtered['sentiment'].value_counts()
-        st.subheader("Jumlah Komentar per Sentimen")
-        plot_bar(sentimen_counts, "Jumlah Komentar per Sentimen", "Sentimen", "Jumlah Komentar")
-
         if selected_sentimen == "Semua":
+            sentimen_counts = df_sentimen['sentiment'].value_counts()
+            st.subheader("Jumlah Komentar per Sentimen")
+            plot_bar(sentimen_counts, "Jumlah Komentar per Sentimen", "Sentimen", "Jumlah Komentar")
+
             for sent in ['positive', 'negative', 'neutral']:
                 st.subheader(f"Wordcloud Komentar {sent.capitalize()}")
-                data_sent = df_filtered[df_filtered['sentiment'] == sent]['cleaned']
-                get_wordcloud(data_sent, f"Wordcloud Komentar {sent.capitalize()}")
-
-            st.subheader("Kata Paling Sering Muncul per Sentimen")
-            for sent in ['positive', 'negative', 'neutral']:
-                st.markdown(f"**{sent.capitalize()}**")
-                data_sent = df_filtered[df_filtered['sentiment'] == sent]['cleaned']
-                top_words = get_top_words(data_sent)
-                plot_top_words(top_words, f"Top 10 Kata pada Sentimen {sent}")
+                data_sent = df_sentimen[df_sentimen['sentiment'] == sent]['cleaned']
+                if not data_sent.empty and data_sent.str.strip().any():
+                    get_wordcloud(data_sent, f"Wordcloud Komentar {sent.capitalize()}")
+                    top_words = get_top_words(data_sent)
+                    plot_top_words(top_words, f"Top 10 Kata pada Sentimen {sent}")
+                else:
+                    st.warning(f"Tidak ada data komentar untuk sentimen **{sent}**.")
         else:
-            st.subheader(f"Wordcloud Komentar {selected_sentimen}")
-            data_sent = df_filtered['cleaned']
-            get_wordcloud(data_sent, f"Wordcloud Komentar {selected_sentimen}")
-
-            st.subheader(f"Top Kata pada Sentimen {selected_sentimen}")
-            top_words = get_top_words(data_sent)
-            plot_top_words(top_words, f"Top 10 Kata pada Sentimen {selected_sentimen}")
+            st.subheader(f"Visualisasi untuk Sentimen: {selected_sentimen.capitalize()}")
+            data_sent = df_sentimen[df_sentimen['sentiment'] == selected_sentimen]['cleaned']
+            if not data_sent.empty and data_sent.str.strip().any():
+                get_wordcloud(data_sent, f"Wordcloud Komentar {selected_sentimen}")
+                top_words = get_top_words(data_sent)
+                plot_top_words(top_words, f"Top 10 Kata pada Sentimen {selected_sentimen}")
+            else:
+                st.warning(f"Tidak ada data komentar untuk sentimen **{selected_sentimen}**.")
 
     elif menu == "Visualisasi Topik":
         st.header("📊 Visualisasi Berdasarkan Topik")
