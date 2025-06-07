@@ -27,22 +27,7 @@ custom_stopwords = {
 # Gabungkan semuanya
 stopwords_all = sastrawi_stopwords.union(custom_stopwords)
 
-# Tambah Font Awesome untuk ikon
-st.markdown('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">', unsafe_allow_html=True)
 
-# --- Fungsi Utility Tambahan ---
-def show_score_cards(title, data_dict, icons_dict, warna_icon="#2e7d32", warna_bg="#e8f5e9"):
-    st.subheader(title)
-    cols = st.columns(len(data_dict))
-    for i, (label, value) in enumerate(data_dict.items()):
-        with cols[i]:
-            st.markdown(f'''
-                <div style="background-color:{warna_bg}; padding:15px; border-radius:10px; text-align:center;">
-                    <i class="{icons_dict.get(label, 'fa-solid fa-circle-info')}" style="font-size:30px;color:{warna_icon};"></i><br>
-                    <strong style="font-size:16px;">{label}</strong><br>
-                    <span style="font-size:24px;color:{warna_icon};">{value:,}</span>
-                </div>
-            ''', unsafe_allow_html=True)
 # --- Fungsi Utility ---
 
 def load_data():
@@ -159,6 +144,22 @@ def plot_top_words(top_words, title):
 def main():
     st.set_page_config(page_title="Analisis Sentimen & Topik Terhadap Pelayanan Pajak", layout="wide")
     st.title("📊 Analisis Sentimen dan Topik Terhadap Pelayanan Pajak")
+    # Tambah Font Awesome untuk ikon
+    st.markdown('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">', unsafe_allow_html=True)
+
+    # --- Fungsi Utility Tambahan ---
+    def show_score_cards(title, data_dict, icons_dict, warna_icon="#2e7d32", warna_bg="#e8f5e9"):
+        st.subheader(title)
+        cols = st.columns(len(data_dict))
+        for i, (label, value) in enumerate(data_dict.items()):
+            with cols[i]:
+                st.markdown(f'''
+                    <div style="background-color:{warna_bg}; padding:15px; border-radius:10px; text-align:center;">
+                        <i class="{icons_dict.get(label, 'fa-solid fa-circle-info')}" style="font-size:30px;color:{warna_icon};"></i><br>
+                        <strong style="font-size:16px;">{label}</strong><br>
+                        <span style="font-size:24px;color:{warna_icon};">{value:,}</span>
+                    </div>
+                ''', unsafe_allow_html=True)
 
     # Load data, model, dan vectorizer
     df_sentimen, df_topik = load_data()
