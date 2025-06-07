@@ -150,6 +150,10 @@ def main():
     model = load_model()
     vectorizer = load_vectorizer()
 
+    # Sidebar dengan judul aplikasi
+    st.sidebar.title("📡 GovGauge.ID")
+    st.sidebar.markdown("**Analisis Layanan Pajak Digital & Manual**")
+
     # Sidebar menu
     menu = st.sidebar.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
 
@@ -172,67 +176,75 @@ def main():
     if menu == "Overview":
         st.header("📈 Overview Analisis Sentimen dan Topik")
         st.markdown("""
-        Analisis sentimen dan topik komentar pengguna aplikasi pajak bertujuan untuk memahami persepsi pengguna terhadap aplikasi, mengidentifikasi masalah utama, dan meningkatkan kualitas layanan.
+        Analisis ini bertujuan untuk memahami persepsi pengguna terhadap aplikasi pajak, mengidentifikasi masalah, dan meningkatkan kualitas layanan.
         """)
 
-        total_komentar = len(df_sentimen)
-        st.metric("Total Komentar", total_komentar)
+        st.metric("Total Komentar", len(df_sentimen))
 
-        sentimen_counts = df_sentimen['sentiment'].value_counts()
         st.subheader("Distribusi Komentar Berdasarkan Sentimen")
-        
-        fig1, ax1 = plt.subplots(figsize=(6,4))
-        ax1.pie(sentimen_counts, labels=sentimen_counts.index, autopct='%1.1f%%', startangle=140, 
-               colors=['#2ecc71','#e74c3c','#95a5a6'])
+        sentimen_counts = df_sentimen['sentiment'].value_counts()
+        fig1, ax1 = plt.subplots()
+        ax1.pie(sentimen_counts, labels=sentimen_counts.index, autopct='%1.1f%%',
+                startangle=140, colors=['#2ecc71', '#e74c3c', '#95a5a6'])
         ax1.axis('equal')
         st.pyplot(fig1)
 
-        topik_counts = df_topik['topik'].value_counts()
         st.subheader("Distribusi Komentar Berdasarkan Topik")
-        
-        fig2, ax2 = plt.subplots(figsize=(8,4))
+        topik_counts = df_topik['topik'].value_counts()
+        fig2, ax2 = plt.subplots()
         sns.barplot(x=topik_counts.index, y=topik_counts.values, palette='magma', ax=ax2)
-        ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right')
-        plt.tight_layout()
+        ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45)
         st.pyplot(fig2)
 
     elif menu == "Visualisasi Sentimen":
+        sentimen_option = st.sidebar.selectbox("Pilih Sentimen", ["Semua", "positive", "negative", "neutral"])
         st.header("📊 Visualisasi Berdasarkan Sentimen")
 
-        sentimen_counts = df_sentimen['sentiment'].value_counts()
-        st.subheader("Jumlah Komentar per Sentimen")
-        plot_bar(sentimen_counts, "Jumlah Komentar per Sentimen", "Sentimen", "Jumlah Komentar")
+        if sentimen_option == "Semua":
+            st.subheader("Jumlah Komentar per Sentimen")
+            plot_bar(df_sentimen['sentiment'].value_counts(), "Jumlah Komentar per Sentimen", "Sentimen", "Jumlah Komentar")
 
-        for sent in ['positive', 'negative', 'neutral']:
-            st.subheader(f"Wordcloud Komentar {sent.capitalize()}")
-            data_sent = df_sentimen[df_sentimen['sentiment'] == sent]['cleaned']
-            get_wordcloud(data_sent, f"Wordcloud Komentar {sent.capitalize()}")
+            for sent in ['positive', 'negative', 'neutral']:
+                st.subheader(f"Wordcloud Komentar {sent.capitalize()}")
+                data_sent = df_sentimen[df_sentimen['sentiment'] == sent]['cleaned']
+                get_wordcloud(data_sent, f"Wordcloud Komentar {sent.capitalize()}")
 
-        st.subheader("Kata Paling Sering Muncul per Sentimen")
-        for sent in ['positive', 'negative', 'neutral']:
-            st.markdown(f"**{sent.capitalize()}**")
-            data_sent = df_sentimen[df_sentimen['sentiment'] == sent]['cleaned']
+                st.markdown(f"**Top Kata - {sent.capitalize()}**")
+                top_words = get_top_words(data_sent)
+                plot_top_words(top_words, f"Top 10 Kata pada Sentimen {sent}")
+        else:
+            st.subheader(f"Visualisasi Sentimen: {sentimen_option.capitalize()}")
+            data_sent = df_sentimen[df_sentimen['sentiment'] == sentimen_option]['cleaned']
+            get_wordcloud(data_sent, f"Wordcloud Komentar {sentimen_option.capitalize()}")
+
             top_words = get_top_words(data_sent)
-            plot_top_words(top_words, f"Top 10 Kata pada Sentimen {sent}")
+            plot_top_words(top_words, f"Top 10 Kata pada Sentimen {sentimen_option}")
 
     elif menu == "Visualisasi Topik":
+        topik_list = ["Semua"] + sorted(df_topik['topik'].unique())
+        topik_option = st.sidebar.selectbox("Pilih Topik", topik_list)
         st.header("📊 Visualisasi Berdasarkan Topik")
 
-        topik_counts = df_topik['topik'].value_counts()
-        st.subheader("Jumlah Komentar per Topik")
-        plot_bar(topik_counts, "Jumlah Komentar per Topik", "Topik", "Jumlah Komentar")
+        if topik_option == "Semua":
+            st.subheader("Jumlah Komentar per Topik")
+            topik_counts = df_topik['topik'].value_counts()
+            plot_bar(topik_counts, "Jumlah Komentar per Topik", "Topik", "Jumlah Komentar")
 
-        for topik in topik_counts.index:
-            st.subheader(f"Wordcloud Komentar {topik}")
-            data_topik = df_topik[df_topik['topik'] == topik]['cleaned']
-            get_wordcloud(data_topik, f"Wordcloud Komentar {topik}")
+            for topik in topik_counts.index:
+                st.subheader(f"Wordcloud Komentar: {topik}")
+                data_topik = df_topik[df_topik['topik'] == topik]['cleaned']
+                get_wordcloud(data_topik, f"Wordcloud Komentar {topik}")
 
-        st.subheader("Kata Paling Sering Muncul per Topik")
-        for topik in topik_counts.index:
-            st.markdown(f"**{topik}**")
-            data_topik = df_topik[df_topik['topik'] == topik]['cleaned']
+                st.markdown(f"**Top Kata - {topik}**")
+                top_words = get_top_words(data_topik)
+                plot_top_words(top_words, f"Top 10 Kata pada Topik {topik}")
+        else:
+            st.subheader(f"Visualisasi Topik: {topik_option}")
+            data_topik = df_topik[df_topik['topik'] == topik_option]['cleaned']
+            get_wordcloud(data_topik, f"Wordcloud Komentar {topik_option}")
+
             top_words = get_top_words(data_topik)
-            plot_top_words(top_words, f"Top 10 Kata pada Topik {topik}")
+            plot_top_words(top_words, f"Top 10 Kata pada Topik {topik_option}")
 
 if __name__ == "__main__":
     main()
