@@ -224,8 +224,13 @@ def main():
     elif menu == "Visualisasi Sentimen":
         st.header("📊 Visualisasi Berdasarkan Sentimen")
 
-        if selected_sentimen == "Semua":
-            sentimen_counts = df_sentimen['sentiment'].value_counts()
+        if selected_sentimen and selected_sentimen != "Semua":
+            df_filtered = df_sentimen[df_sentimen['sentiment'] == selected_sentimen]
+        else:
+            df_filtered = df_sentimen
+
+            sentimen_counts = df_filtered['sentiment'].value_counts()
+
     
             st.subheader("📌 Ringkasan Komentar per Sentimen")
 
