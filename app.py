@@ -9,9 +9,23 @@ import re
 from collections import Counter
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 
-# Inisialisasi stopword remover
+# Inisialisasi stopword remover dan stopword tambahan
 factory = StopWordRemoverFactory()
 stopword_remover = factory.create_stop_word_remover()
+
+# Stopword dari Sastrawi
+sastrawi_stopwords = set(factory.get_stop_words())
+
+# Tambahan stopword informal/slang yang umum di komentar
+custom_stopwords = {
+    'gak', 'ga', 'aja', 'ya', 'nih', 'sih', 'nya', 'deh', 'loh', 
+    'dong', 'kok', 'kan', 'tau', 'punya', 'lu', 'gue', 'udah', 
+    'cuma', 'biar', 'bgt', 'ampun', 'banget', 'mas', 'mbak', 'makasih', 'terimakasih', 'min'
+}
+
+# Gabungkan semuanya
+stopwords_all = sastrawi_stopwords.union(custom_stopwords)
+
 
 # --- Fungsi Utility ---
 
@@ -48,11 +62,13 @@ def preprocess_text(text):
     try:
         text = str(text).lower()
         text = re.sub(r'[^a-z\s]', '', text)
-        text = stopword_remover.remove(text)
-        return text
+        words = text.split()
+        filtered_words = [w for w in words if w not in stopwords_all]
+        return ' '.join(filtered_words)
     except Exception as e:
         st.error(f"Error di preprocess_text: {e}")
         return ""
+
 
 def get_wordcloud(data, title):
     text = ' '.join(data)
