@@ -162,7 +162,7 @@ def main():
     selected_topik = None
 
     if menu == "Visualisasi Sentimen":
-        selected_sentimen = st.sidebar.selectbox("Pilih Sentimen", ["Semua", "Positif", "Negatif", "Netral"])
+        selected_sentimen = st.sidebar.selectbox("Pilih Sentimen", ["Semua", "positive", "negative", "neutral"])
     elif menu == "Visualisasi Topik":
         topik_options = [
             "Semua",
