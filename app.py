@@ -242,10 +242,10 @@ def main():
         # Ambil jumlah label dari sentimen_counts
         num_labels = len(sentimen_counts)
         
-        # Ambil warna dari colormap magma
-        colors = cm.magma(np.linspace(0.2, 0.8, num_labels))
+        # Ambil warna dari colormap magma dan ubah ke format hex
+        colors = [mcolors.to_hex(c) for c in cm.magma(np.linspace(0.2, 0.8, num_labels))]
         
-        # Buat plot pie chart
+        # Buat pie chart
         fig1, ax1 = plt.subplots(figsize=(6, 4))
         ax1.pie(sentimen_counts, labels=sentimen_counts.index, autopct='%1.1f%%',
                 startangle=140, colors=colors)
