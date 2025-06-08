@@ -1,4 +1,7 @@
 import streamlit as st
+st.set_page_config(page_title="Analisis Sentimen & Topik Terhadap Pelayanan Pajak", layout="wide")
+# Tambah Font Awesome untuk ikon
+st.markdown('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">', unsafe_allow_html=True)
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,6 +30,19 @@ custom_stopwords = {
 # Gabungkan semuanya
 stopwords_all = sastrawi_stopwords.union(custom_stopwords)
 
+# --- Fungsi Utility Tambahan ---
+def show_score_cards(title, data_dict, icons_dict, warna_icon="#2e7d32", warna_bg="#e8f5e9"):
+    st.subheader(title)
+    cols = st.columns(len(data_dict))
+    for i, (label, value) in enumerate(data_dict.items()):
+        with cols[i]:
+            st.markdown(f'''
+                <div style="background-color:{warna_bg}; padding:15px; border-radius:10px; text-align:center;">
+                    <i class="{icons_dict.get(label, 'fa-solid fa-circle-info')}" style="font-size:30px;color:{warna_icon};"></i><br>
+                    <strong style="font-size:16px;">{label}</strong><br>
+                    <span style="font-size:24px;color:{warna_icon};">{value:,}</span>
+                </div>
+            ''', unsafe_allow_html=True)
 
 # --- Fungsi Utility ---
 
@@ -142,7 +158,6 @@ def plot_top_words(top_words, title):
 
 # --- Main App ---
 def main():
-    st.set_page_config(page_title="Analisis Sentimen & Topik Terhadap Pelayanan Pajak", layout="wide")
     st.title("📊 Analisis Sentimen dan Topik Terhadap Pelayanan Pajak")
     
     
@@ -201,6 +216,26 @@ def main():
 
         total_komentar = len(df_sentimen)
         st.metric("Total Komentar", total_komentar)
+
+        # Tambahkan di bagian Overview
+        jumlah_per_sentimen = df_sentimen['sentiment'].value_counts().to_dict()
+        ikon_sentimen = {
+            'positive': 'fa-solid fa-face-smile',
+            'negative': 'fa-solid fa-face-frown',
+            'neutral': 'fa-solid fa-face-meh'
+        }
+        show_score_cards("Jumlah Komentar per Sentimen", jumlah_per_sentimen, ikon_sentimen)
+        
+        jumlah_per_topik = df_topik['topik'].value_counts().to_dict()
+        ikon_topik = {
+            'Error-Aplikasi': 'fa-solid fa-bug',
+            'Login-NPWP-Daftar': 'fa-solid fa-id-card',
+            'Lapor_Pajak-SPT': 'fa-solid fa-file-invoice-dollar',
+            'OTP-Verifikasi_Email': 'fa-solid fa-envelope-open-text',
+            'Pembayaran-Kantor_Pajak': 'fa-solid fa-building-columns'
+        }
+        show_score_cards("Jumlah Komentar per Topik", jumlah_per_topik, ikon_topik, warna_icon=\"#6a1b9a\", warna_bg=\"#f3e5f5\")
+
 
         sentimen_counts = df_sentimen['sentiment'].value_counts()
         st.subheader("Distribusi Komentar Berdasarkan Sentimen")
