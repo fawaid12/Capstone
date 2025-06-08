@@ -173,7 +173,7 @@ def main():
     vectorizer = load_vectorizer()
 
     #logo taxgaugeid
-    st.sidebar.image("Logo Tax Gauge ID.png", use_column_width=True)
+    st.sidebar.image("Logo Tax Gauge ID.png", use_container_width=True)
 
     # Sidebar dengan judul aplikasi
     st.sidebar.title("📡 TaxGauge.ID")
