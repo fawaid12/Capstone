@@ -213,7 +213,7 @@ def main():
     if menu == "Overview":
         st.header("📈 Overview Analisis Sentimen dan Topik")
         st.markdown("""
-        Analisis sentimen dan topik komentar pengguna aplikasi pajak bertujuan untuk memahami persepsi pengguna terhadap aplikasi, mengidentifikasi masalah utama, dan meningkatkan kualitas layanan.
+        Analisis sentimen dan topik komentar terhadap kualitas layanan pajak untuk mengidentifikasi masalah utama dan meningkatkan kualitas layanan.
         """)
 
         total_komentar = len(df_sentimen)
