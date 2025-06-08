@@ -164,7 +164,6 @@ def plot_top_words(top_words, title):
 
 # --- Main App ---
 def main():
-    st.title("📊 Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
     
     
     # Load data, model, dan vectorizer
@@ -217,6 +216,7 @@ def main():
     }
 
     if menu == "Overview":
+        st.title("📊 Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
         st.header("📈 Overview Analisis Sentimen dan Topik")
         st.markdown("""
         Analisis sentimen dan topik komentar terhadap kualitas layanan pajak untuk mengidentifikasi masalah utama dan meningkatkan kualitas layanan.
