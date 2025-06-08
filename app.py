@@ -276,13 +276,10 @@ def main():
     
         st.subheader("📌 Ringkasan Komentar per Sentimen")
     
-        jumlah_per_sentimen = df_sentimen['sentiment'].value_counts().to_dict()
-        ikon_sentimen = {
-            'positive': 'fa-solid fa-face-smile',
-            'negative': 'fa-solid fa-face-frown',
-            'neutral': 'fa-solid fa-face-meh'
-        }
-        show_score_cards("Jumlah Komentar per Sentimen", jumlah_per_sentimen, ikon_sentimen)
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Negatif", sentimen_counts.get('negative', 0))
+        col2.metric("Netral", sentimen_counts.get('neutral', 0))
+        col3.metric("Positif", sentimen_counts.get('positive', 0))
 
     
         if selected_sentimen == "Semua":
