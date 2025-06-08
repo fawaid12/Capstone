@@ -176,7 +176,6 @@ def main():
     st.sidebar.image("Logo Tax Gauge ID.png", use_container_width=True)
 
     # Sidebar dengan judul aplikasi
-    st.sidebar.title("📡 TaxGauge.ID")
     st.sidebar.markdown("**Sentimen Jadi Ukuran, Layanan Jadi Tujuan**")
 
     # Sidebar menu
