@@ -27,7 +27,7 @@ custom_stopwords = {
     'dong', 'kok', 'kan', 'tau', 'punya', 'lu', 'gue', 'udah', 'mau', 'yg', 'malah', 'orang', 'lebih',
     'cuma', 'biar', 'bgt', 'ampun', 'banget', 'mas', 'mbak', 'min', 'sm', 'b', 'g', 'klo', 'dah', 'tp', 
     'lah', 'the', 'trus', 'pagi', 'udh', 'kak', 'ni', 'gmn', 'tuh', 'tgl', 'blm', 'gk', 'sy', 'tdk',
-    'sdh', 'tpi', 'utk', 'd', 'wong', 'dr', 'ngga', 'org', 'dr', 'tlp', 'paje', 'tlong', 'koc, 'lgi', 'lg',
+    'sdh', 'tpi', 'utk', 'd', 'wong', 'dr', 'ngga', 'org', 'dr', 'tlp', 'paje', 'tlong', 'koc', 'lgi', 'lg',
     'klu', 'skli', 'gw', 'jg', 'eh', 'jd', 'kek', 'tak'
 }
 
