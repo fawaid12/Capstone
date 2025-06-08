@@ -25,8 +25,8 @@ sastrawi_stopwords = set(factory.get_stop_words())
 custom_stopwords = {
     'gak', 'ga', 'aja', 'ya', 'nih', 'sih', 'nya', 'deh', 'loh', 'pak', 'apa', 'terus', 'buat', 
     'dong', 'kok', 'kan', 'tau', 'punya', 'lu', 'gue', 'udah', 'mau', 'yg', 'malah', 'orang', 'lebih',
-    'cuma', 'biar', 'bgt', 'ampun', 'banget', 'mas', 'mbak', 'min', 'sm', 'b', 'g',
-    'lah', 'the'
+    'cuma', 'biar', 'bgt', 'ampun', 'banget', 'mas', 'mbak', 'min', 'sm', 'b', 'g', 'klo', 'dah', 'tp', 
+    'lah', 'the', 'trus', 'pagi', 'udh', 'kak', 'ni', 'gmn'
 }
 
 # Gabungkan semuanya
