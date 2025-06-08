@@ -13,6 +13,8 @@ import pickle
 import re
 from collections import Counter
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from PIL import Image
+
 
 # Inisialisasi stopword remover dan stopword tambahan
 factory = StopWordRemoverFactory()
@@ -169,6 +171,9 @@ def main():
     df_sentimen, df_topik = load_data()
     model = load_model()
     vectorizer = load_vectorizer()
+
+    #logo taxgaugeid
+    st.sidebar.image("Logo Tax Gauge ID.png", use_column_width=True)
 
     # Sidebar dengan judul aplikasi
     st.sidebar.title("📡 TaxGauge.ID")
