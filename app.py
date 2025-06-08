@@ -239,9 +239,16 @@ def main():
         sentimen_counts = df_sentimen['sentiment'].value_counts()
         st.subheader("Distribusi Komentar Berdasarkan Sentimen")
         
-        fig1, ax1 = plt.subplots(figsize=(6,4))
-        ax1.pie(sentimen_counts, labels=sentimen_counts.index, autopct='%1.1f%%', startangle=140, 
-               colors=['#2ecc71','#e74c3c','#95a5a6'])
+        # Ambil jumlah label dari sentimen_counts
+        num_labels = len(sentimen_counts)
+        
+        # Ambil warna dari colormap magma
+        colors = cm.magma(np.linspace(0.2, 0.8, num_labels))
+        
+        # Buat plot pie chart
+        fig1, ax1 = plt.subplots(figsize=(6, 4))
+        ax1.pie(sentimen_counts, labels=sentimen_counts.index, autopct='%1.1f%%',
+                startangle=140, colors=colors)
         ax1.axis('equal')
         st.pyplot(fig1)
 
