@@ -5,6 +5,8 @@ st.markdown('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import matplotlib.colors as mcolors
 import seaborn as sns
 from wordcloud import WordCloud
 import pickle
