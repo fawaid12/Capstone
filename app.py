@@ -162,7 +162,7 @@ def plot_top_words(top_words, title):
 
 # --- Main App ---
 def main():
-    st.title("📊 Analisis Sentimen dan Topik Terhadap Pelayanan Pajak di Indonesia")
+    st.title("📊 Aplikasi Analisis Sentimen Publik terhadap Pelayanan Pajak di Indonesia")
     
     
     # Load data, model, dan vectorizer
@@ -172,7 +172,7 @@ def main():
 
     # Sidebar dengan judul aplikasi
     st.sidebar.title("📡 TaxGauge.ID")
-    st.sidebar.markdown("**Analisis Kepuasan Layanan Pajak Elektonik dan Non-Elektronik**")
+    st.sidebar.markdown("**Sentimen Jadi Ukuran, Layanan Jadi Tujuan**")
 
     # Sidebar menu
     menu = st.sidebar.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
