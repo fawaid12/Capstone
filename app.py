@@ -160,7 +160,7 @@ def plot_top_words(top_words, title):
 
 # --- Main App ---
 def main():
-    st.title("📊 Analisis Sentimen dan Topik Terhadap Pelayanan Pajak")
+    st.title("📊 Analisis Sentimen dan Topik Terhadap Pelayanan Pajak di Indonesia")
     
     
     # Load data, model, dan vectorizer
