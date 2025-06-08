@@ -234,8 +234,7 @@ def main():
             'OTP-Verifikasi_Email': 'fa-solid fa-envelope-open-text',
             'Pembayaran-Kantor_Pajak': 'fa-solid fa-building-columns'
         }
-        show_score_cards("Jumlah Komentar per Topik", jumlah_per_topik, ikon_topik, warna_icon=\"#6a1b9a\", warna_bg=\"#f3e5f5\")
-
+        show_score_cards("Jumlah Komentar per Topik", jumlah_per_topik, ikon_topik, warna_icon="#6a1b9a", warna_bg="#f3e5f5")
 
         sentimen_counts = df_sentimen['sentiment'].value_counts()
         st.subheader("Distribusi Komentar Berdasarkan Sentimen")
