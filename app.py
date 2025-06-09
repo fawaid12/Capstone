@@ -93,7 +93,7 @@ def preprocess_text(text):
         return ""
 
 
-def get_wordcloud(data, title):
+def get_wordcloud(data, title, max_words=20):
     text = ' '.join(data)
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
     plt.figure(figsize=(10,5))
