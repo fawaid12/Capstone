@@ -338,17 +338,20 @@ def main():
 
             for topik in topik_counts.index:
                 data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
-        
+                
                 if data_topik.empty:
                     continue
         
+                data_topik.name = 'cleaned'  # pastikan ada nama kolom
                 populer = get_popular_comments(data_topik, top_n=5)
                 populer['Topik'] = topik
-                tabel_komentar_populer.append(populer[['Topik', 'Komentar']])  # pastikan hanya kolom ini
-        
+                tabel_komentar_populer.append(populer)
+    
             if tabel_komentar_populer:
-                df_populer = pd.concat(tabel_komentar_populer, ignore_index=True)
+                df_populer = pd.concat(tabel_komentar_populer, ignore_index=True)[['Topik', 'Komentar']]
                 st.dataframe(df_populer)
+            else:
+                st.info("Tidak ada komentar populer yang bisa ditampilkan.")
     else:
         st.info("Tidak ada komentar populer yang bisa ditampilkan.")
         else:
