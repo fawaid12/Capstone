@@ -277,7 +277,7 @@ def main():
         st.subheader("Distribusi Komentar Berdasarkan Topik")
         
         fig2, ax2 = plt.subplots(figsize=(8,4))
-        sns.barplot(x=topik_counts.index, y=topik_counts.values, palette='magma', ax=ax2)
+        sns.barplot(x=topik_counts.index, y=topik_counts.values, palette='viridis', ax=ax2)
         ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right')
         plt.tight_layout()
         st.pyplot(fig2)
