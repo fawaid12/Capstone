@@ -147,7 +147,7 @@ def classify_topic(text, topik_keywords):
         return "Tidak Teridentifikasi"
     return topik_terpilih
 
-def get_top_words(data, n=10):
+def get_top_words(data, n=5):
     all_words = ' '.join(data).split()
     counter = Counter(all_words)
     return counter.most_common(n)
@@ -332,27 +332,25 @@ def main():
         col5.metric("Pembayaran-Kantor_Pajak", topik_counts.get('Pembayaran-Kantor_Pajak', 0))
 
         if selected_topik == "Semua":
-            for topik in topik_counts.index:
-                st.subheader(f"🧩 Wordcloud Komentar: {topik}")
-                data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
-    
-                if data_topik.empty:
-                    st.warning(f"Tidak ada komentar tersedia untuk topik: {topik}")
-                    continue
-    
-                get_wordcloud(data_topik, f"Wordcloud Komentar {topik}")
+            tabel_top_words = []
 
-            st.subheader("📌 Kata Paling Sering Muncul per Topik")
             for topik in topik_counts.index:
-                st.markdown(f"**{topik}**")
                 data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
-    
+            
                 if data_topik.empty:
-                    st.info(f"Tidak ada data untuk topik '{topik}'")
                     continue
-    
-                top_words = get_top_words(data_topik)
-                plot_top_words(top_words, f"Top 10 Kata pada Topik {topik}")
+            
+                top_words = get_top_words(data_topik).head(5)['Kata'].tolist()  # ambil list 5 kata
+                kata_string = ', '.join(top_words)  # gabungkan jadi satu string
+            
+                tabel_top_words.append({'Topik': topik, 'Kata': kata_string})
+            
+            if tabel_top_words:
+                df_topik_kata = pd.DataFrame(tabel_top_words)
+                st.dataframe(df_topik_kata)
+            else:
+                st.info("Tidak ada kata populer yang bisa ditampilkan.")
+
 
     
         else:
