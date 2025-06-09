@@ -264,7 +264,7 @@ def main():
         num_labels = len(sentimen_counts)
         
         # Ambil warna dari colormap magma dan ubah ke format hex
-        colors = [mcolors.to_hex(c) for c in cm.crest(np.linspace(0.2, 0.8, num_labels))]
+        colors = [mcolors.to_hex(c) for c in cm.Paired(np.linspace(0.2, 0.8, num_labels))]
         
         # Buat pie chart
         fig1, ax1 = plt.subplots(figsize=(6, 4))
