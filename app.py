@@ -335,7 +335,7 @@ def main():
             st.subheader("💬 Tabel Komentar Paling Sering Muncul per Topik")
 
             tabel_komentar_populer = []
-        
+
             for topik in topik_counts.index:
                 data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
         
@@ -344,13 +344,13 @@ def main():
         
                 populer = get_popular_comments(data_topik, top_n=5)
                 populer['Topik'] = topik
-                tabel_komentar_populer.append(populer)
+                tabel_komentar_populer.append(populer[['Topik', 'Komentar']])  # pastikan hanya kolom ini
         
             if tabel_komentar_populer:
-                df_populer = pd.concat(tabel_komentar_populer, ignore_index=True)[['Topik', 'Komentar']]
+                df_populer = pd.concat(tabel_komentar_populer, ignore_index=True)
                 st.dataframe(df_populer)
-            else:
-                st.info("Tidak ada komentar populer yang bisa ditampilkan.")
+    else:
+        st.info("Tidak ada komentar populer yang bisa ditampilkan.")
         else:
             st.subheader(f"🧩 Wordcloud Komentar: {selected_topik}")
             data_topik = df_filtered['cleaned'].dropna()
