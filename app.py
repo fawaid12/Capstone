@@ -168,7 +168,7 @@ def plot_top_words(top_words, title):
     
     words, counts = zip(*top_words)
     plt.figure(figsize=(8,5))
-    sns.barplot(x=list(counts), y=list(words), palette='viridis')
+    sns.barplot(x=list(counts), y=list(words), palette='Paired')
     plt.title(title)
     plt.xlabel('Frekuensi')
     plt.ylabel('Kata')
