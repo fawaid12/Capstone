@@ -264,7 +264,7 @@ def main():
         num_labels = len(sentimen_counts)
         
         # Ambil warna dari colormap magma dan ubah ke format hex
-        colors = [mcolors.to_hex(c) for c in cm.bright(np.linspace(0.2, 0.8, num_labels))]
+        colors = [mcolors.to_hex(c) for c in cm.Set2(np.linspace(0.2, 0.8, num_labels))]
         
         # Buat pie chart
         fig1, ax1 = plt.subplots(figsize=(6, 4))
@@ -277,7 +277,7 @@ def main():
         st.subheader("Distribusi Komentar Berdasarkan Topik")
         
         fig2, ax2 = plt.subplots(figsize=(8,4))
-        sns.barplot(x=topik_counts.index, y=topik_counts.values, palette='bright', ax=ax2)
+        sns.barplot(x=topik_counts.index, y=topik_counts.values, palette='Set2', ax=ax2)
         ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right')
         plt.tight_layout()
         st.pyplot(fig2)
