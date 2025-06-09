@@ -147,10 +147,16 @@ def classify_topic(text, topik_keywords):
         return "Tidak Teridentifikasi"
     return topik_terpilih
 
-def get_top_words(text_series, top_n=5):
+def get_top_words_list(text_series, top_n=5):
     words = ' '.join(text_series).split()
     top_words = Counter(words).most_common(top_n)
     return pd.DataFrame(top_words, columns=['Kata', 'Jumlah'])
+
+def get_top_words(data, n=10):
+    all_words = ' '.join(data).split()
+    counter = Counter(all_words)
+    return counter.most_common(n)
+
 
 def plot_top_words(top_words, title):
     if not top_words:
@@ -340,7 +346,7 @@ def main():
                 if data_topik.empty:
                     continue
             
-                top_words = get_top_words(data_topik).head(5)['Kata'].tolist()  # ambil list 5 kata
+                top_words = get_top_words_list(data_topik).head(5)['Kata'].tolist()  # ambil list 5 kata
                 kata_string = ', '.join(top_words)  # gabungkan jadi satu string
             
                 tabel_top_words.append({'Topik': topik, 'Kata': kata_string})
