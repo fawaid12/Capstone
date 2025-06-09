@@ -349,6 +349,7 @@ def main():
         
             if tabel_komentar_populer:
                 df_populer_concat = pd.concat(tabel_komentar_populer, ignore_index=True)
+                st.write("Kolom tersedia:", df_populer_concat.columns.tolist())
                 df_populer_concat = df_populer_concat[['Topik', 'Komentar', 'Jumlah']]  # Atur urutan kolom
                 st.dataframe(df_populer_concat)
             else:
