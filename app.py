@@ -104,7 +104,7 @@ def get_wordcloud(data, title, max_words=20):
 
 def plot_bar(data, title, xlabel, ylabel):
     fig, ax = plt.subplots(figsize=(8,5))
-    sns.barplot(x=data.index, y=data.values, palette='seagreen', ax=ax)
+    sns.barplot(x=data.index, y=data.values,color='seagreen', ax=ax)
     ax.set_title(title, fontsize=16)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
@@ -168,7 +168,7 @@ def plot_top_words(top_words, title):
     
     words, counts = zip(*top_words)
     plt.figure(figsize=(8,5))
-    sns.barplot(x=list(counts), y=list(words), palette='seagreen')
+    sns.barplot(x=list(counts), y=list(words), color='seagreen')
     plt.title(title)
     plt.xlabel('Frekuensi')
     plt.ylabel('Kata')
@@ -277,7 +277,7 @@ def main():
         st.subheader("Distribusi Komentar Berdasarkan Topik")
         
         fig2, ax2 = plt.subplots(figsize=(8,4))
-        sns.barplot(x=topik_counts.index, y=topik_counts.values, palette='seagreen', ax=ax2)
+        sns.barplot(x=topik_counts.index, y=topik_counts.values, color='seagreen', ax=ax2)
         ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right')
         plt.tight_layout()
         st.pyplot(fig2)
