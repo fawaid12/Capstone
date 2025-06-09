@@ -346,15 +346,13 @@ def main():
                 populer = get_popular_comments(data_topik, top_n=5)
                 populer['Topik'] = topik
                 tabel_komentar_populer.append(populer)
-    
+        
             if tabel_komentar_populer:
                 df_populer_concat = pd.concat(tabel_komentar_populer, ignore_index=True)
-                st.write(df_populer_concat.columns)
-                st.write(df_populer_concat.head())
-
-                st.dataframe(df_populer)
+                df_populer_concat = df_populer_concat[['Topik', 'Komentar', 'Jumlah']]  # Atur urutan kolom
+                st.dataframe(df_populer_concat)
             else:
-                st.info("Tidak ada komentar populer yang bisa ditampilkan.")
+                st.warning("Tidak ada komentar populer yang ditemukan untuk topik apa pun.")
     
         else:
             st.subheader(f"🧩 Wordcloud Komentar: {selected_topik}")
