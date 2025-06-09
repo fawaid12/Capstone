@@ -342,20 +342,31 @@ def main():
 
             for topik in topik_counts.index:
                 data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
-            
+                
                 if data_topik.empty:
                     continue
-            
-                top_words = get_top_words_list(data_topik).head(5)['Kata'].tolist()  # ambil list 5 kata
-                kata_string = ', '.join(top_words)  # gabungkan jadi satu string
-            
-                tabel_top_words.append({'Topik': topik, 'Kata': kata_string})
+                
+                top_words_df = get_top_words_list(data_topik, n=5)
+                top_words = top_words_df['Kata'].tolist()
+                kata_string = ', '.join(top_words)
+                
+                tabel_top_words.append({'Topik': topik, '5 Kata Populer': kata_string})
             
             if tabel_top_words:
                 df_topik_kata = pd.DataFrame(tabel_top_words)
-                st.dataframe(df_topik_kata)
+                
+                # Tampilkan dalam Streamlit dengan styling
+                st.markdown("### 📌 Tabel Topik & 5 Kata Populer")
+                st.dataframe(
+                    df_topik_kata.style.set_properties(**{
+                        'text-align': 'left',
+                        'white-space': 'pre-wrap'
+                    }),
+                    use_container_width=True
+                )
             else:
                 st.info("Tidak ada kata populer yang bisa ditampilkan.")
+
 
 
     
