@@ -110,6 +110,10 @@ def plot_bar(data, title, xlabel, ylabel):
     ax.set_ylabel(ylabel)
     ax.tick_params(axis='x', rotation=45)
     st.pyplot(fig)
+    
+def get_popular_comments(text_series, top_n=5):
+    return text_series.value_counts().head(top_n).reset_index().rename(columns={'index': 'Komentar', text_series.name: 'Jumlah'})
+
 
 
 # --- Load Model & Vectorizer ---
@@ -328,27 +332,25 @@ def main():
         col5.metric("Pembayaran-Kantor_Pajak", topik_counts.get('Pembayaran-Kantor_Pajak', 0))
 
         if selected_topik == "Semua":
-            for topik in topik_counts.index:
-                st.subheader(f"🧩 Wordcloud Komentar: {topik}")
-                data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
-    
-                if data_topik.empty:
-                    st.warning(f"Tidak ada komentar tersedia untuk topik: {topik}")
-                    continue
-    
-                get_wordcloud(data_topik, f"Wordcloud Komentar {topik}")
+            st.subheader("💬 Tabel Komentar Paling Sering Muncul per Topik")
 
-            st.subheader("📌 Kata Paling Sering Muncul per Topik")
+            tabel_komentar_populer = []
+        
             for topik in topik_counts.index:
-                st.markdown(f"**{topik}**")
                 data_topik = df_filtered[df_filtered['topik'] == topik]['cleaned'].dropna()
-    
+        
                 if data_topik.empty:
-                    st.info(f"Tidak ada data untuk topik '{topik}'")
                     continue
-    
-                top_words = get_top_words(data_topik)
-                plot_top_words(top_words, f"Top 10 Kata pada Topik {topik}")
+        
+                populer = get_popular_comments(data_topik, top_n=5)
+                populer['Topik'] = topik
+                tabel_komentar_populer.append(populer)
+        
+            if tabel_komentar_populer:
+                df_populer = pd.concat(tabel_komentar_populer, ignore_index=True)[['Topik', 'Komentar', 'Jumlah']]
+                st.dataframe(df_populer)
+            else:
+                st.info("Tidak ada komentar populer yang bisa ditampilkan.")
         else:
             st.subheader(f"🧩 Wordcloud Komentar: {selected_topik}")
             data_topik = df_filtered['cleaned'].dropna()
