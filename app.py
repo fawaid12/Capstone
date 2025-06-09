@@ -347,7 +347,7 @@ def main():
                 tabel_komentar_populer.append(populer)
         
             if tabel_komentar_populer:
-                df_populer = pd.concat(tabel_komentar_populer, ignore_index=True)[['Topik', 'Komentar', 'Jumlah']]
+                df_populer = pd.concat(tabel_komentar_populer, ignore_index=True)[['Topik', 'Komentar']]
                 st.dataframe(df_populer)
             else:
                 st.info("Tidak ada komentar populer yang bisa ditampilkan.")
