@@ -352,8 +352,7 @@ def main():
                 st.dataframe(df_populer)
             else:
                 st.info("Tidak ada komentar populer yang bisa ditampilkan.")
-    else:
-        st.info("Tidak ada komentar populer yang bisa ditampilkan.")
+    
         else:
             st.subheader(f"🧩 Wordcloud Komentar: {selected_topik}")
             data_topik = df_filtered['cleaned'].dropna()
