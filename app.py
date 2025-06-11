@@ -199,7 +199,7 @@ def main():
 
     #menambahkan menu
     with col_menu:
-        st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
+        menu=st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
     
     # Tambahkan selectbox tambahan berdasarkan menu
     with col_pilihan:
