@@ -189,10 +189,10 @@ def main():
     
     with col_logo:
         st.image("Logo Tax Gauge ID.png", width=100)
-        st.markdown("Sentimen jadi ukuran, Layanan jadi tujuan")
-    
+        
     with col_title:
         st.title("Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
+        st.markdown("Sentimen jadi ukuran, Layanan jadi tujuan")
 
     #tata letak select box menu
     col_menu, col_pilihan=st.columns([0.5, 0.5])
