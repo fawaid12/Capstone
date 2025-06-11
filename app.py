@@ -206,7 +206,7 @@ def main():
         selected_sentimen = None
         selected_topik = None
         if menu == "Visualisasi Sentimen":
-            selected_sentimen = st.sidebar.selectbox("Pilih Sentimen", ["Semua", "positive", "negative", "neutral"])
+            selected_sentimen = st.selectbox("Pilih Sentimen", ["Semua", "positive", "negative", "neutral"])
         elif menu == "Visualisasi Topik":
             topik_options = [
                 "Semua",
@@ -216,7 +216,7 @@ def main():
                 "OTP-Verifikasi_Email",
                 "Pembayaran-Kantor_Pajak"
             ]
-            selected_topik = st.sidebar.selectbox("Pilih Topik", topik_options)
+            selected_topik = st.selectbox("Pilih Topik", topik_options)
         
     # Info pembuat
     st.sidebar.markdown("---")
