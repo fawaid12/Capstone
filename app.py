@@ -184,7 +184,7 @@ def main():
     model = load_model()
     vectorizer = load_vectorizer()
 
-    # Tata letak logo kiri dan menu horizontal di atas
+    # Tata letak logo dan judul
     col_logo, col_title = st.columns([0.07,1])
     
     with col_logo:
@@ -193,26 +193,30 @@ def main():
     
     with col_title:
         st.title("Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
-    
+
+    #tata letak select box menu
+    col_menu, col_pilihan=st.columns([0.5, 0.5])
+
     #menambahkan menu
-    menu = st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
+    with col_menu:
+        st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
     
     # Tambahkan selectbox tambahan berdasarkan menu
-    selected_sentimen = None
-    selected_topik = None
-
-    if menu == "Visualisasi Sentimen":
-        selected_sentimen = st.sidebar.selectbox("Pilih Sentimen", ["Semua", "positive", "negative", "neutral"])
-    elif menu == "Visualisasi Topik":
-        topik_options = [
-            "Semua",
-            "Error-Aplikasi",
-            "Login-NPWP-Daftar",
-            "Lapor_Pajak-SPT",
-            "OTP-Verifikasi_Email",
-            "Pembayaran-Kantor_Pajak"
-        ]
-        selected_topik = st.sidebar.selectbox("Pilih Topik", topik_options)
+    with col_pilihan:
+        selected_sentimen = None
+        selected_topik = None
+        if menu == "Visualisasi Sentimen":
+            selected_sentimen = st.sidebar.selectbox("Pilih Sentimen", ["Semua", "positive", "negative", "neutral"])
+        elif menu == "Visualisasi Topik":
+            topik_options = [
+                "Semua",
+                "Error-Aplikasi",
+                "Login-NPWP-Daftar",
+                "Lapor_Pajak-SPT",
+                "OTP-Verifikasi_Email",
+                "Pembayaran-Kantor_Pajak"
+            ]
+            selected_topik = st.sidebar.selectbox("Pilih Topik", topik_options)
         
     # Info pembuat
     st.sidebar.markdown("---")
