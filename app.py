@@ -424,12 +424,16 @@ def main():
             if data_topik.empty:
                 st.warning("Tidak ada komentar tersedia untuk topik ini.")
             else:
-                get_wordcloud(data_topik, f"Wordcloud Komentar {selected_topik}")
-    
-                st.subheader(f"📌 Top Kata pada Topik: {selected_topik}")
-                top_words = get_top_words(data_topik)
-                plot_top_words(top_words, f"Top 10 Kata pada Topik {selected_topik}")
-
+                col1, col2 = st.columns(2)
+            
+                with col1:
+                    st.markdown("#### Wordcloud")
+                    get_wordcloud(data_topik, f"Wordcloud Komentar {selected_topik}")
+            
+                with col2:
+                    st.markdown("#### Top 10 Kata")
+                    top_words = get_top_words(data_topik)
+                    plot_top_words(top_words, f"Top 10 Kata pada Topik {selected_topik}")
 
 if __name__ == "__main__":
     main()
