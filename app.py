@@ -272,7 +272,7 @@ def main():
             sentimen_counts = df_sentimen['sentiment'].value_counts()
             st.subheader("Distribusi Komentar Berdasarkan Sentimen")
             
-            fig2, ax2 = plt.subplots(figsize=(8,4))
+            fig2, ax2 = plt.subplots(figsize=(10,4))
             sns.barplot(x=sentimen_counts.index, y=sentimen_counts.values, palette='crest', ax=ax2)
             ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right')
             plt.tight_layout()
