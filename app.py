@@ -218,10 +218,6 @@ def main():
             ]
             selected_topik = st.selectbox("Pilih Topik", topik_options)
         
-    # Info pembuat
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### Dibuat oleh:")
-    st.sidebar.markdown("Capstone-LAI25-SM091")
 
     # Preprocessing untuk visualisasi
     df_sentimen['cleaned'] = df_sentimen['content'].astype(str).apply(preprocess_text)
