@@ -323,17 +323,29 @@ def main():
         # Tampilkan 3 tabel jika user pilih "Semua"
         else:
             st.subheader("💬 Top Kata untuk Setiap Sentimen")
-    
+        
+            # Hitung top kata per sentimen
+            top_kata = {}
+            for sent in ['positive', 'neutral', 'negative']:
+                data_sent = df_sentimen[df_sentimen['sentiment'] == sent]['cleaned']
+                if not data_sent.empty and data_sent.str.strip().any():
+                    top_words = get_top_words(data_sent)
+                    df_top = pd.DataFrame(top_words, columns=['Kata', 'Frekuensi'])
+                else:
+                    df_top = pd.DataFrame(columns=['Kata', 'Frekuensi'])
+                top_kata[sent] = df_top
+        
+            # Tampilkan 3 tabel horizontal
             col1, col2, col3 = st.columns(3)
-    
+        
             with col1:
                 st.markdown("**Top Kata Positif**")
                 st.dataframe(top_kata['positive'], use_container_width=True)
-    
+        
             with col2:
                 st.markdown("**Top Kata Netral**")
                 st.dataframe(top_kata['neutral'], use_container_width=True)
-    
+        
             with col3:
                 st.markdown("**Top Kata Negatif**")
                 st.dataframe(top_kata['negative'], use_container_width=True)
