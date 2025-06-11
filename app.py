@@ -195,7 +195,7 @@ def main():
         st.title("Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
     
     #menambahkan menu
-    menu = st.sidebar.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
+    menu = st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
     
     # Tambahkan selectbox tambahan berdasarkan menu
     selected_sentimen = None
