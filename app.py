@@ -189,9 +189,10 @@ def main():
     
     with col_logo:
         st.image("Logo Tax Gauge ID.png", width=100)
+        st.markdown("Sentimen jadi ukuran, Layanan jadi tujuan")
     
     with col_title:
-        st.markdown("### Sentimen Jadi Ukuran, Layanan Jadi Tujuan")
+        st.title("Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
     
     with col_menu:
         menu = st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
@@ -233,7 +234,6 @@ def main():
     }
 
     if menu == "Overview":
-        st.title("📊 Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
         st.header("📈 Overview Analisis Sentimen dan Topik")
         st.markdown("""
         Analisis sentimen dan topik komentar terhadap kualitas layanan pajak untuk mengidentifikasi masalah utama dan meningkatkan kualitas layanan.
