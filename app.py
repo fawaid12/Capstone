@@ -184,14 +184,18 @@ def main():
     model = load_model()
     vectorizer = load_vectorizer()
 
-    #logo taxgaugeid
-    st.sidebar.image("Logo Tax Gauge ID.png", use_container_width=True)
+    # Tata letak logo kiri dan menu horizontal di atas
+    col_logo, col_title, col_menu = st.columns([1, 3, 2])
+    
+    with col_logo:
+        st.image("Logo Tax Gauge ID.png", width=100)
+    
+    with col_title:
+        st.markdown("### Sentimen Jadi Ukuran, Layanan Jadi Tujuan")
+    
+    with col_menu:
+        menu = st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
 
-    # Sidebar dengan judul aplikasi
-    st.sidebar.markdown("**Sentimen Jadi Ukuran, Layanan Jadi Tujuan**")
-
-    # Sidebar menu
-    menu = st.sidebar.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
 
     # Tambahkan selectbox tambahan berdasarkan menu
     selected_sentimen = None
