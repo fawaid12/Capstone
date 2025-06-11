@@ -206,7 +206,7 @@ def main():
         
     with col_title:
         st.markdown("""
-        <h1 style='font-size:30px; font-family:Verdana; color:#2c3e50;'>
+        <h1 style='font-size:28px; font-family:Verdana; color:#2c3e50;'>
         Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia
         </h1>
         """, unsafe_allow_html=True)
