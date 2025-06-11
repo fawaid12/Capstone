@@ -314,9 +314,17 @@ def main():
             data_sent = df_filtered['cleaned']
     
             if not data_sent.empty and data_sent.str.strip().any():
-                get_wordcloud(data_sent, f"Wordcloud Komentar {selected_sentimen.capitalize()}")
-                top_words = get_top_words(data_sent)
-                plot_top_words(top_words, f"Top 10 Kata pada Sentimen {selected_sentimen.capitalize()}")
+                col1, col2 = st.columns(2)
+            
+                with col1:
+                    st.markdown("#### Wordcloud")
+                    get_wordcloud(data_sent, f"Wordcloud Komentar {selected_sentimen.capitalize()}")
+            
+                with col2:
+                    st.markdown("#### Top 10 Kata")
+                    top_words = get_top_words(data_sent)
+                    plot_top_words(top_words, f"Top 10 Kata pada Sentimen {selected_sentimen.capitalize()}")
+
             else:
                 st.warning(f"Tidak ada data komentar untuk sentimen **{selected_sentimen}**.")
     
