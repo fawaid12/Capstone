@@ -185,7 +185,7 @@ def main():
     vectorizer = load_vectorizer()
 
     # Tata letak logo kiri dan menu horizontal di atas
-    col_logo, col_title, col_menu = st.columns([1, 3, 2])
+    col_logo, col_title = st.columns([0.5, 1])
     
     with col_logo:
         st.image("Logo Tax Gauge ID.png", width=100)
@@ -194,9 +194,6 @@ def main():
     with col_title:
         st.title("Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
     
-    with col_menu:
-        menu = st.selectbox("Pilih Menu", ["Overview", "Visualisasi Sentimen", "Visualisasi Topik"])
-
 
     # Tambahkan selectbox tambahan berdasarkan menu
     selected_sentimen = None
