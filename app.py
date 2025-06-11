@@ -427,6 +427,17 @@ def main():
                     st.markdown("#### Top 10 Kata")
                     top_words = get_top_words(data_topik)
                     plot_top_words(top_words, f"Top 10 Kata pada Topik {selected_topik}")
+    # Footer di halaman utama
+    st.markdown("---")
+    st.markdown(
+        """
+        <div style='text-align: center; padding-top: 10px; font-size: 13px; color: gray;'>
+            🧾 Dibuat oleh <strong>Capstone-LAI25-SM091</strong> — LASKAR AI 2025
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
 
 if __name__ == "__main__":
     main()
