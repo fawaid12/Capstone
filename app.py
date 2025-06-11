@@ -188,7 +188,7 @@ def main():
     col_logo, col_title = st.columns([0.07,1])
     
     with col_logo:
-        st.image("Logo Tax Gauge ID.png", width=100)
+        st.image("Logo Tax Gauge ID.png", width=120)
         
     with col_title:
         st.title("Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
