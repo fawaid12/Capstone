@@ -50,6 +50,20 @@ def show_score_cards(title, data_dict, icons_dict, warna_icon="#2e7d32", warna_b
                 </div>
             ''', unsafe_allow_html=True)
 
+# Fungsi styling sederhana
+def style_table(df, warna_header):
+    return df.style.set_table_styles([
+        {'selector': 'th',
+         'props': [('background-color', warna_header), 
+                   ('color', 'white'),
+                   ('text-align', 'center')]}
+    ]).set_properties(**{
+        'text-align': 'center',
+        'font-family': 'sans-serif',
+        'font-size': '14px',
+    }).format({'Frekuensi': '{:,}'})
+
+
 # --- Fungsi Utility ---
 
 def load_data():
@@ -351,15 +365,16 @@ def main():
         
             with col1:
                 st.markdown("**Top Kata Positif**")
-                st.dataframe(top_kata['positive'], use_container_width=True)
-        
+                st.write(style_table(top_kata['positive'], '#4CAF50'))
+            
             with col2:
                 st.markdown("**Top Kata Netral**")
-                st.dataframe(top_kata['neutral'], use_container_width=True)
-        
+                st.write(style_table(top_kata['neutral'], '#FFC107'))
+            
             with col3:
                 st.markdown("**Top Kata Negatif**")
-                st.dataframe(top_kata['negative'], use_container_width=True)
+                st.write(style_table(top_kata['negative'], '#F44336'))
+
 
 
     elif menu == "Visualisasi Topik":
