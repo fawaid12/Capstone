@@ -365,15 +365,15 @@ def main():
 
             with col1:
                 st.markdown("**Top Kata Positif**")
-                st.markdown(style_table(top_kata['positive'], '#4CAF50').to_html(), unsafe_allow_html=True)
+                st.markdown(style_table(top_kata['positive'], '#dcebe4').to_html(), unsafe_allow_html=True)
             
             with col2:
                 st.markdown("**Top Kata Netral**")
-                st.markdown(style_table(top_kata['neutral'], '#FFC107').to_html(), unsafe_allow_html=True)
+                st.markdown(style_table(top_kata['neutral'], '#fff9e6').to_html(), unsafe_allow_html=True)
             
             with col3:
                 st.markdown("**Top Kata Negatif**")
-                st.markdown(style_table(top_kata['negative'], '#F44336').to_html(), unsafe_allow_html=True)
+                st.markdown(style_table(top_kata['negative'], '#e8f7ba').to_html(), unsafe_allow_html=True)
 
 
     elif menu == "Visualisasi Topik":
