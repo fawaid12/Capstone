@@ -185,7 +185,7 @@ def main():
     vectorizer = load_vectorizer()
 
     # Tata letak logo dan judul
-    col_logo, col_title = st.columns([0.07,1])
+    col_logo, col_title = st.columns([0.07,2])
     
     with col_logo:
         st.image("Logo Tax Gauge ID.png", width=120)
