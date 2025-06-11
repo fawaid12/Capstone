@@ -185,7 +185,7 @@ def main():
     vectorizer = load_vectorizer()
 
     # Tata letak logo kiri dan menu horizontal di atas
-    col_logo, col_title = st.columns([0.5, 1])
+    col_logo, col_title = st.columns([0.07,1])
     
     with col_logo:
         st.image("Logo Tax Gauge ID.png", width=100)
