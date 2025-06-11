@@ -265,7 +265,7 @@ def main():
         show_score_cards("Jumlah Komentar per Topik", jumlah_per_topik, ikon_topik, warna_icon="#6a1b9a", warna_bg="#f3e5f5")
         
         #membuat kolom pie dan plot bar
-        col_sent, col_top=st.columns([0.8, 1.2])
+        col_sent, col_top=st.columns([1, 1])
 
         #colum sent
         with col_sent:
