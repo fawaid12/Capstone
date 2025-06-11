@@ -308,25 +308,35 @@ def main():
         col3.metric("Positif", sentimen_counts.get('positive', 0))
 
     
-        if selected_sentimen == "Semua":
-            for sent in ['positive', 'negative', 'neutral']:
-                st.subheader(f"Wordcloud Komentar {sent.capitalize()}")
-                data_sent = df_sentimen[df_sentimen['sentiment'] == sent]['cleaned']
-                if not data_sent.empty and data_sent.str.strip().any():
-                    get_wordcloud(data_sent, f"Wordcloud Komentar {sent.capitalize()}")
-                    top_words = get_top_words(data_sent)
-                    plot_top_words(top_words, f"Top 10 Kata pada Sentimen {sent}")
-                else:
-                    st.warning(f"Tidak ada data komentar untuk sentimen **{sent}**.")
-        else:
+        # Visualisasi jika pilih satu sentimen
+        if selected_sentimen and selected_sentimen != "Semua":
             st.subheader(f"Visualisasi untuk Sentimen: {selected_sentimen.capitalize()}")
             data_sent = df_filtered['cleaned']
+    
             if not data_sent.empty and data_sent.str.strip().any():
                 get_wordcloud(data_sent, f"Wordcloud Komentar {selected_sentimen.capitalize()}")
                 top_words = get_top_words(data_sent)
                 plot_top_words(top_words, f"Top 10 Kata pada Sentimen {selected_sentimen.capitalize()}")
             else:
                 st.warning(f"Tidak ada data komentar untuk sentimen **{selected_sentimen}**.")
+    
+        # Tampilkan 3 tabel jika user pilih "Semua"
+        else:
+            st.subheader("💬 Top Kata untuk Setiap Sentimen")
+    
+            col1, col2, col3 = st.columns(3)
+    
+            with col1:
+                st.markdown("**Top Kata Positif**")
+                st.dataframe(top_kata['positive'], use_container_width=True)
+    
+            with col2:
+                st.markdown("**Top Kata Netral**")
+                st.dataframe(top_kata['neutral'], use_container_width=True)
+    
+            with col3:
+                st.markdown("**Top Kata Negatif**")
+                st.dataframe(top_kata['negative'], use_container_width=True)
 
 
     elif menu == "Visualisasi Topik":
