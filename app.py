@@ -265,28 +265,21 @@ def main():
         show_score_cards("Jumlah Komentar per Topik", jumlah_per_topik, ikon_topik, warna_icon="#6a1b9a", warna_bg="#f3e5f5")
         
         #membuat kolom pie dan plot bar
-        col_pie, col_bar=st.columns(2)
+        col_sent, col_top=st.columns(2)
 
-        #colum pie
-        with col_pie:
+        #colum sent
+        with col_sent:
             sentimen_counts = df_sentimen['sentiment'].value_counts()
             st.subheader("Distribusi Komentar Berdasarkan Sentimen")
             
-            # Ambil jumlah label dari sentimen_counts
-            num_labels = len(sentimen_counts)
-            
-            # Ambil warna dari colormap magma dan ubah ke format hex
-            colors = [mcolors.to_hex(c) for c in cm.Paired(np.linspace(0.2, 0.8, num_labels))]
-            
-            # Buat pie chart
-            fig1, ax1 = plt.subplots(figsize=(10, 4))
-            ax1.pie(sentimen_counts, labels=sentimen_counts.index, autopct='%1.1f%%',
-                    startangle=140, colors=colors)
-            ax1.axis('equal')
-            st.pyplot(fig1)
+            fig2, ax2 = plt.subplots(figsize=(8,4))
+            sns.barplot(x=sentimen_counts.index, y=sentimen_counts.values, palette='crest', ax=ax2)
+            ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right')
+            plt.tight_layout()
+            st.pyplot(fig2)
 
-        #colum bar
-        with col_bar:
+        #colum top
+        with col_top:
             topik_counts = df_topik['topik'].value_counts()
             st.subheader("Distribusi Komentar Berdasarkan Topik")
             
