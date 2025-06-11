@@ -55,7 +55,7 @@ def style_table(df, warna_header):
     return df.style.set_table_styles([
         {'selector': 'th',
          'props': [('background-color', warna_header), 
-                   ('color', 'white'),
+                   ('color', 'black'),
                    ('text-align', 'center')]}
     ]).set_properties(**{
         'text-align': 'center',
