@@ -205,7 +205,11 @@ def main():
         st.image("Logo Tax Gauge ID.png", width=120)
         
     with col_title:
-        st.title("Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia")
+        st.markdown("""
+        <h1 style='font-size:36px; font-family:Arial; color:#2c3e50;'>
+        Aplikasi Analisis Sentimen Publik terhadap Layanan Pajak di Indonesia
+        </h1>
+        """, unsafe_allow_html=True)
         st.markdown("Sentimen jadi ukuran, Layanan jadi tujuan")
 
     #tata letak select box menu
