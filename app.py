@@ -362,19 +362,18 @@ def main():
         
             # Tampilkan 3 tabel horizontal
             col1, col2, col3 = st.columns(3)
-        
+
             with col1:
                 st.markdown("**Top Kata Positif**")
-                st.write(style_table(top_kata['positive'], '#4CAF50'))
+                st.markdown(style_table(top_kata['positive'], '#4CAF50').to_html(), unsafe_allow_html=True)
             
             with col2:
                 st.markdown("**Top Kata Netral**")
-                st.write(style_table(top_kata['neutral'], '#FFC107'))
+                st.markdown(style_table(top_kata['neutral'], '#FFC107').to_html(), unsafe_allow_html=True)
             
             with col3:
                 st.markdown("**Top Kata Negatif**")
-                st.write(style_table(top_kata['negative'], '#F44336'))
-
+                st.markdown(style_table(top_kata['negative'], '#F44336').to_html(), unsafe_allow_html=True)
 
 
     elif menu == "Visualisasi Topik":
