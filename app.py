@@ -279,7 +279,7 @@ def main():
             colors = [mcolors.to_hex(c) for c in cm.Paired(np.linspace(0.2, 0.8, num_labels))]
             
             # Buat pie chart
-            fig1, ax1 = plt.subplots(figsize=(6, 4))
+            fig1, ax1 = plt.subplots(figsize=(4, 4))
             ax1.pie(sentimen_counts, labels=sentimen_counts.index, autopct='%1.1f%%',
                     startangle=140, colors=colors)
             ax1.axis('equal')
