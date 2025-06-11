@@ -283,7 +283,7 @@ def main():
             topik_counts = df_topik['topik'].value_counts()
             st.subheader("Distribusi Komentar Berdasarkan Topik")
             
-            fig2, ax2 = plt.subplots(figsize=(8,6))
+            fig2, ax2 = plt.subplots(figsize=(8,5))
             sns.barplot(x=topik_counts.index, y=topik_counts.values, palette='crest', ax=ax2)
             ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right')
             plt.tight_layout()
