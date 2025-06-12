@@ -370,7 +370,7 @@ def main():
 
             with col1:
                 st.markdown("**Top Kata Positif**")
-                st.markdown(style_table(top_kata['positive'], '#dcebe4').to_html(), unsafe_allow_html=True)
+                st.markdown(style_table(top_kata['negative'], '#dcebe4').to_html(), unsafe_allow_html=True)
             
             with col2:
                 st.markdown("**Top Kata Netral**")
@@ -378,7 +378,7 @@ def main():
             
             with col3:
                 st.markdown("**Top Kata Negatif**")
-                st.markdown(style_table(top_kata['negative'], '#e8f7ba').to_html(), unsafe_allow_html=True)
+                st.markdown(style_table(top_kata['positive'], '#e8f7ba').to_html(), unsafe_allow_html=True)
 
 
     elif menu == "Visualisasi Topik":
