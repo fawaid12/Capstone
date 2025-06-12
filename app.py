@@ -31,7 +31,7 @@ custom_stopwords = {
     'lah', 'the', 'trus', 'pagi', 'udh', 'kak', 'ni', 'gmn', 'tuh', 'tgl', 'blm', 'gk', 'sy', 'tdk',
     'sdh', 'tpi', 'utk', 'd', 'wong', 'dr', 'ngga', 'org', 'dr', 'tlp', 'paje', 'tlong', 'koc', 'lgi', 'lg',
     'klu', 'skli', 'gw', 'jg', 'eh', 'jd', 'kek', 'tak', 'gimana', 'sama', 'padahal', 'jadi', 'kalo', 'kalau',
-    'bikin', 'pa', 'minta', 'jangan', 'bukan', 'semoga', 'best', 'pas', 'masa', 'semua', 'muncul' 
+    'bikin', 'pa', 'minta', 'jangan', 'bukan', 'semoga', 'best', 'pas', 'masa', 'semua', 'muncul', 'hari' 
 }
 
 # Gabungkan semuanya
