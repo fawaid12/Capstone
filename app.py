@@ -32,7 +32,7 @@ custom_stopwords = {
     'sdh', 'tpi', 'utk', 'd', 'wong', 'dr', 'ngga', 'org', 'dr', 'tlp', 'paje', 'tlong', 'koc', 'lgi', 'lg',
     'klu', 'skli', 'gw', 'jg', 'eh', 'jd', 'kek', 'tak', 'gimana', 'sama', 'padahal', 'jadi', 'kalo', 'kalau',
     'bikin', 'pa', 'minta', 'jangan', 'bukan', 'semoga', 'best', 'pas', 'masa', 'semua', 'muncul', 'hari',
-    'sekali', 'jam'
+    'sekali', 'jam', 'suruh'
 }
 
 # Gabungkan semuanya
